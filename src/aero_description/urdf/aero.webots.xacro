@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Webots ROS2 integration -->
+    <webots>
+        <!-- LIDAR -->
+        <device type="Lidar"
+                name="lidar">
+            <topicName>/scan</topicName>             <!-- ROS2 topic -->
+            <frameName>lidar_link</frameName>        <!-- TF frame -->
+            <updateRate>5.0</updateRate>             <!-- Hz -->
+            <horizontalResolution>300</horizontalResolution>
+            <fieldOfView>4.78</fieldOfView>          <!-- ≈ 2.39 * 2 (radians) -->
+            <minRange>0.12</minRange>
+            <maxRange>5.5</maxRange>
+            <noise>0.01</noise>
+        </device>
+
+        <!-- IMU -->
+        <device type="InertialUnit"
+                name="imu">
+            <topicName>/imu</topicName>
+            <frameName>imu_link</frameName>
+            <updateRate>100</updateRate>
+        </device>
+
+        <!-- ROS2 Control Interface -->
+        <plugin type="Ros2Control"
+                name="ros2_control">
+            <parameters>$(find aero_bringup)/config/controllers.yaml</parameters>
+        </plugin>
+    </webots>
+
+</robot>

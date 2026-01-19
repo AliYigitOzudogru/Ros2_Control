@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="base_length" value="1.3" />
+    <xacro:property name="base_width" value="1.0" />
+    <xacro:property name="base_height" value="0.4" />
+    <xacro:property name="wheel_radius" value="0.20" />
+    <xacro:property name="wheel_length" value="0.1" />
+
+    <link name="base_footprint" />
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="${base_length} ${base_width} ${base_height}" />
+            </geometry>
+            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+            <material name="blue" />
+        </visual>
+        <inertial>
+            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+            <mass value="10"/>
+            <inertia ixx="0.1667" ixy="0" ixz="0"
+                    iyx="0" iyy="0.333" iyz="0"
+                    izx="0" izy="0" izz="0.4333" />
+        </inertial>
+        <collision>
+            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+            <geometry>
+                <box size="${base_length} ${base_width} ${base_height}" />
+            </geometry>
+        </collision>
+    </link>
+
+    <xacro:macro name="wheel_link" params="prefix">
+        <link name="${prefix}_wheel_link">
+            <visual>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_length}" />
+                </geometry>
+                <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0" />
+                <material name="grey" />
+            </visual>
+            <inertial>
+                <mass value="0.1"/>
+                <inertia ixx="0.00027"  ixy="0"  ixz="0" iyy="0.00027" iyz="0" izz="0.0005" iyx="0" izy="0" izx="0" />
+            </inertial>
+            <collision>
+                <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0" />
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_length}" />
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+
+    <xacro:wheel_link prefix="back_right" />
+    <xacro:wheel_link prefix="back_left" />
+
+    <xacro:wheel_link prefix="front_right" />
+    <xacro:wheel_link prefix="front_left" />
+
+    <link name="lidar_link">
+        <visual>
+            <geometry>
+                <box size="0.04 0.08 0.06"></box>
+            </geometry>
+            <origin xyz="0 0 0.06" rpy="0 0 0" />
+            <material name="black" >
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <sensor name="lidar" type="gpu_lidar">
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <update_rate>5</update_rate>
+            <topic>scan</topic>
+            <gz_frame_id>lidar_link</gz_frame_id>
+            <lidar>
+            <scan>
+                <horizontal>
+                <samples>360</samples>
+                <resolution>1.000000</resolution>
+                <min_angle>0.000000</min_angle>
+                <max_angle>6.280000</max_angle>
+                </horizontal>
+            </scan>
+            <range>
+                <min>0.120000</min>
+                <max>3.5</max>
+                <resolution>0.015000</resolution>
+            </range>
+            <noise>
+                <type>gaussian</type>
+                <mean>0.0</mean>
+                <stddev>0.01</stddev>
+            </noise>
+            </lidar>
+        </sensor>
+    </link>
+
+    <link name="imu_link">
+        <visual>
+            <geometry>
+                <box size="0.2 0.2 0.04"></box>
+            </geometry>
+            <origin xyz="0 0 0.02" rpy="0 0 0"/>
+            <material name="cyan" >
+                <color rgba="0 1 1 1" />
+            </material>
+        </visual>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>1</always_on>
+            <update_rate>1</update_rate>
+            <visualize>true</visualize>
+            <topic>imu</topic>
+        </sensor>
+    </link>
+
+    <!-- <link name="caster_wheel_link">
+        <visual>
+            <geometry>
+                <sphere radius="${wheel_radius / 2.0}" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="grey" />
+        </visual>
+    </link> -->
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="lidar_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="lidar_link" />
+        <origin xyz="0.62 0 ${base_height}" rpy="0 0 0" />
+    </joint>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="imu_link" />
+        <origin xyz="-0.45 0 ${base_height}" rpy="0 0 0" />
+    </joint>
+
+    <xacro:if value="$(arg arm_enabled)">
+        <joint name="arm_joint" type="fixed">
+            <parent link="base_link" />
+            <child link="arm_base" />
+            <origin xyz="0.2 0 ${wheel_radius + base_height / 2}" rpy="0 0 0" />
+        </joint>
+    </xacro:if>
+
+    <joint name="base_front_right_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="front_right_wheel_link" />
+        <origin xyz="${base_length / 3.0} ${-(base_width + wheel_length) / 2.0} 0" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="base_front_left_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="front_left_wheel_link" />
+        <origin xyz="${base_length / 3.0} ${(base_width + wheel_length) / 2.0} 0" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="base_back_right_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="back_right_wheel_link" />
+        <origin xyz="${-base_length / 3.0} ${-(base_width + wheel_length) / 2.0} 0" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="base_back_left_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="back_left_wheel_link" />
+        <origin xyz="${-base_length / 3.0} ${(base_width + wheel_length) / 2.0} 0" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <!-- <joint name="base_caster_wheel_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="caster_wheel_link" />
+        <origin xyz="${base_length / 3.0} 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
+    </joint> -->
+
+</robot>

@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="aero_test">
+    <!-- Physics -->
+    <physics type="dart"/>
+
+    <!-- Sun (light) -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+
+    <!-- Ground plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface><friction><ode/></friction></surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Walls -->
+    <model name="walls">
+      <static>true</static>
+      <link name="link">
+        <!-- Four box walls -->
+        <collision name="north_wall_col">
+          <geometry><box><size>10 0.1 2</size></box></geometry>
+          <pose>0 5 1 0 0 0</pose>
+        </collision>
+        <visual name="north_wall_vis">
+          <geometry><box><size>10 0.1 2</size></box></geometry>
+          <pose>0 5 1 0 0 0</pose>
+        </visual>
+
+        <collision name="south_wall_col">
+          <geometry><box><size>10 0.1 2</size></box></geometry>
+          <pose>0 -5 1 0 0 0</pose>
+        </collision>
+        <visual name="south_wall_vis">
+          <geometry><box><size>10 0.1 2</size></box></geometry>
+          <pose>0 -5 1 0 0 0</pose>
+        </visual>
+
+        <collision name="east_wall_col">
+          <geometry><box><size>0.1 10 2</size></box></geometry>
+          <pose>5 0 1 0 0 0</pose>
+        </collision>
+        <visual name="east_wall_vis">
+          <geometry><box><size>0.1 10 2</size></box></geometry>
+          <pose>5 0 1 0 0 0</pose>
+        </visual>
+
+        <collision name="west_wall_col">
+          <geometry><box><size>0.1 10 2</size></box></geometry>
+          <pose>-5 0 1 0 0 0</pose>
+        </collision>
+        <visual name="west_wall_vis">
+          <geometry><box><size>0.1 10 2</size></box></geometry>
+          <pose>-5 0 1 0 0 0</pose>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacles -->
+    <model name="box1">
+      <pose>-2 0 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="col"><geometry><box><size>1 1 1</size></box></geometry></collision>
+        <visual name="vis"><geometry><box><size>1 1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="box2">
+      <pose>2 2 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="col"><geometry><box><size>1 1 1</size></box></geometry></collision>
+        <visual name="vis"><geometry><box><size>1 1 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

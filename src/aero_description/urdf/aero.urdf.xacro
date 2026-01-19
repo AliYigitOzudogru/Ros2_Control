@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot name="aero" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:arg name="use_ignition" default="false"/>
+    <xacro:arg name="use_gazebo" default="false"/>
+    <xacro:arg name="use_webots" default="false"/>
+    <xacro:arg name="arm_enabled" default="true" />
+    <xacro:arg name="arm_prefix" default="arm_" />
+    <xacro:property name="use_ignition" value="$(arg use_ignition)" />
+    <xacro:property name="use_gazebo" value="$(arg use_gazebo)" />
+    <xacro:property name="use_webots" value="$(arg use_webots)" />
+
+    <xacro:include filename="common_properties.xacro" />
+    <xacro:include filename="aero_base.xacro" />
+    <xacro:include filename="mobile_base.ros2_control.xacro" />
+
+
+    <xacro:if value="$(arg arm_enabled)">
+        <xacro:include filename= "arm/arm.urdf.xacro" />
+    </xacro:if>
+    
+
+
+    <xacro:if value="$(arg use_ignition)">
+        <xacro:include filename="aero.ignition.xacro" />
+    </xacro:if>
+    <xacro:if value="$(arg use_webots)">
+        <xacro:include filename="aero.webots.xacro" />
+    </xacro:if>
+    <xacro:if value="$(arg use_gazebo)">
+        <xacro:include filename="aero.gazebo.xacro" />
+    </xacro:if>
+
+</robot>

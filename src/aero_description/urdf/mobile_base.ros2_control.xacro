@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:if value="${(not use_ignition and not use_gazebo) and not use_webots}">
+        <ros2_control name="MobileBaseHardwareInterface" type="system">
+            <hardware>
+                <plugin>mock_components/GenericSystem</plugin>
+                <param name="calculate_dynamics">true</param>
+            </hardware>
+            <xacro:macro name="mock_joint" params="name">
+                <joint name="${name}">
+                    <command_interface name="velocity" />
+                    <command_interface name="position" />
+                    <state_interface name="position" />
+                    <state_interface name="velocity" />
+                </joint>
+            </xacro:macro>
+            <xacro:mock_joint name="base_back_left_wheel_joint" />
+            <xacro:mock_joint name="base_back_right_wheel_joint" />
+            <xacro:mock_joint name="base_front_left_wheel_joint" />
+            <xacro:mock_joint name="base_front_right_wheel_joint" />
+
+            <xacro:if value="$(arg arm_enabled)">
+                <xacro:mock_joint name="$(arg arm_prefix)joint0" />
+                <xacro:mock_joint name="$(arg arm_prefix)joint1" />
+                <xacro:mock_joint name="$(arg arm_prefix)joint2" />
+                <xacro:mock_joint name="$(arg arm_prefix)joint3" />
+                <xacro:mock_joint name="$(arg arm_prefix)joint4" />
+            </xacro:if>
+        </ros2_control>
+    </xacro:if>
+
+    <xacro:if value="$(arg use_ignition)">
+        <ros2_control name="GazeboSimSystem" type="system">
+            <hardware>
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            </hardware>
+            <xacro:macro name="gazebo_joint" params="name">
+                <joint name="${name}">
+                    <command_interface name="velocity" />
+                    <command_interface name="position" />
+                    <state_interface name="position" />
+                    <state_interface name="velocity"/>
+                </joint>
+            </xacro:macro>
+
+            <xacro:gazebo_joint name="base_front_right_wheel_joint" />
+            <xacro:gazebo_joint name="base_front_left_wheel_joint" />
+            <xacro:gazebo_joint name="base_back_right_wheel_joint" />
+            <xacro:gazebo_joint name="base_back_left_wheel_joint" />
+
+            <xacro:if value="$(arg arm_enabled)">
+                <xacro:gazebo_joint name="$(arg arm_prefix)joint0" />
+                <xacro:gazebo_joint name="$(arg arm_prefix)joint1" />
+                <xacro:gazebo_joint name="$(arg arm_prefix)joint2" />
+                <xacro:gazebo_joint name="$(arg arm_prefix)joint3" />
+                <xacro:gazebo_joint name="$(arg arm_prefix)joint4" />
+            </xacro:if>
+            
+        </ros2_control>
+    </xacro:if>
+
+    <xacro:if value="${use_webots}">
+        <ros2_control name="WebotsSystem" type="system">
+            <hardware>
+                <plugin>webots_ros2_control::WebotsSystem</plugin>
+            </hardware>
+            <xacro:macro name="webots_joint" params="name">
+                <joint name="${name}">
+                    <command_interface name="velocity" />
+                    <command_interface name="position" />
+                    <state_interface name="position" />
+                    <state_interface name="velocity"/>
+                </joint>
+            </xacro:macro>
+
+            <xacro:webots_joint name="base_front_right_wheel_joint" />
+            <xacro:webots_joint name="base_front_left_wheel_joint" />
+            <xacro:webots_joint name="base_back_right_wheel_joint" />
+            <xacro:webots_joint name="base_back_left_wheel_joint" />
+
+            <xacro:if value="$(arg arm_enabled)">
+                <xacro:webots_joint name="$(arg arm_prefix)joint0" />
+                <xacro:webots_joint name="$(arg arm_prefix)joint1" />
+                <xacro:webots_joint name="$(arg arm_prefix)joint2" />
+                <xacro:webots_joint name="$(arg arm_prefix)joint3" />
+                <xacro:webots_joint name="$(arg arm_prefix)joint4" />
+            </xacro:if>
+            
+        </ros2_control>
+    </xacro:if>
+
+</robot>

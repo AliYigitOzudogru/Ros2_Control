@@ -1,0 +1,42 @@
+ekf_filter_node:
+  ros__parameters:
+    use_sim_time: true # ? 
+
+    # Frequency of the filter update (Hz)
+    frequency: 50.0
+
+    # Input topics and sensor types
+    sensor_timeout: 0.1
+    two_d_mode: true  # TODO: Set to false later
+
+    # Topic for wheel odometry (from diff_drive_controller)
+    odom0: /diff_drive_controller/odom
+    odom0_config: [true,  true,  false,   # X, Y, Z position
+                   false, false, true,  # Roll, Pitch, Yaw orientation
+                   true, true, false,   # X, Y, Z linear velocity
+                   false, false, true,   # Roll, Pitch, Yaw angular velocity
+                   false, false, false]  # Linear acceleration (not used here)
+    odom0_differential: false
+    odom0_relative: true
+    # odom0_pose_rejection_threshold: 0.5
+    # odom0_twist_rejection_threshold: 0.5
+
+    # Topic for IMU data
+    imu0: /imu
+    imu0_config: [false, false, false,   # X, Y, Z position
+                  false,  false,  true,   # Roll, Pitch, Yaw orientation
+                  false, false, false,   # X, Y, Z linear velocity
+                  false, false, true,    # Roll, Pitch, Yaw angular velocity
+                  true,  true,  true]    # X, Y, Z linear acceleration
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true # # #
+    imu0_relative: true
+    # imu0_pose_rejection_threshold: 0.5
+    # imu0_twist_rejection_threshold: 0.5
+
+    # Frame configuration
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: odom  # EKF outputs odom->base_link transform
+    publish_tf: true

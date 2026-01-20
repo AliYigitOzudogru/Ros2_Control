@@ -1,0 +1,1 @@
+/home/ali/Desktop/Ros2_Control/src/aero_moveit_config/launch/moveit_rviz.launch.py

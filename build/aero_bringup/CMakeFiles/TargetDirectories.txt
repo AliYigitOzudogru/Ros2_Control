@@ -1,0 +1,9 @@
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/uninstall.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/aero_bringup_uninstall.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/test.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/edit_cache.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/rebuild_cache.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/list_install_components.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/install.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/install/local.dir
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/CMakeFiles/install/strip.dir

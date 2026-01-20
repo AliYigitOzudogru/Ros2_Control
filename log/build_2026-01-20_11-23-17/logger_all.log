@@ -1,0 +1,452 @@
+[0.078s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--symlink-install'][0m
+[0.078s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x74888462e860>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74888462e1d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74888462e1d0>>, mixin_verb=('build',))[0m
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.200s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/ali/Desktop/Ros2_Control'
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.200s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.207s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'ignore'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'ignore_ament_install'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['colcon_pkg']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'colcon_pkg'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['colcon_meta']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'colcon_meta'
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['ros']
+[0.208s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'ros'
+[0.209s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_arm_control' with type 'ros.ament_python' and name 'aero_arm_control'[0m
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'ignore'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'ignore_ament_install'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['colcon_pkg']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'colcon_pkg'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['colcon_meta']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'colcon_meta'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['ros']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'ros'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_bringup' with type 'ros.ament_cmake' and name 'aero_bringup'[0m
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'ignore'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'ignore_ament_install'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['colcon_pkg']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'colcon_pkg'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['colcon_meta']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'colcon_meta'
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['ros']
+[0.210s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'ros'
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_description' with type 'ros.ament_cmake' and name 'aero_description'[0m
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'ignore'
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'ignore_ament_install'
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['colcon_pkg']
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'colcon_pkg'
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['colcon_meta']
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'colcon_meta'
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['ros']
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'ros'
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_moveit_config' with type 'ros.ament_cmake' and name 'aero_moveit_config'[0m
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'ignore'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'ignore_ament_install'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['colcon_pkg']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'colcon_pkg'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['colcon_meta']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'colcon_meta'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['ros']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'ros'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/my_robot_bringup' with type 'ros.ament_cmake' and name 'my_robot_bringup'[0m
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'ignore'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'ignore_ament_install'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['colcon_pkg']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'colcon_pkg'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['colcon_meta']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'colcon_meta'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['ros']
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'ros'
+[0.212s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/my_robot_description' with type 'ros.ament_cmake' and name 'my_robot_description'[0m
+[0.213s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.213s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.213s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.213s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.213s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.224s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.224s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.226s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 333 installed packages in /opt/ros/humble[0m
+[0.227s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.247s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_target' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'aero_arm_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/aero_arm_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/aero_arm_control', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/aero_arm_control', 'symlink_install': True, 'test_result_base': None}[0m
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'cmake_target' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'aero_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/aero_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/aero_description', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/aero_description', 'symlink_install': True, 'test_result_base': None}[0m
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'cmake_target' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.248s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'my_robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/my_robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/my_robot_description', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/my_robot_description', 'symlink_install': True, 'test_result_base': None}[0m
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'cmake_target' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'aero_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/aero_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/aero_bringup', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/aero_bringup', 'symlink_install': True, 'test_result_base': None}[0m
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'aero_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/aero_moveit_config', 'symlink_install': True, 'test_result_base': None}[0m
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'my_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.249s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'my_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/my_robot_bringup', 'symlink_install': True, 'test_result_base': None}[0m
+[0.249s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.250s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.250s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/aero_description' with build type 'ament_cmake'
+[0.250s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ali/Desktop/Ros2_Control/src/aero_description'
+[0.252s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.252s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.252s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.254s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/my_robot_description' with build type 'ament_cmake'
+[0.254s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ali/Desktop/Ros2_Control/src/my_robot_description'
+[0.255s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.255s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.256s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control' with build type 'ament_python'
+[0.256s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_arm_control', 'ament_prefix_path')
+[0.256s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/ament_prefix_path.ps1'
+[0.257s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/ament_prefix_path.dsv'
+[0.257s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/ament_prefix_path.sh'
+[0.257s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.258s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.260s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_description[0m
+[0.263s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/my_robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/my_robot_description[0m
+[0.475s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control'
+[0.476s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.476s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.756s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/my_robot_description[0m
+[0.759s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/my_robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/my_robot_description -- -j20 -l20[0m
+[0.759s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_description[0m
+[0.759s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_description -- -j20 -l20[0m
+[0.796s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/my_robot_description -- -j20 -l20[0m
+[0.806s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/my_robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/my_robot_description[0m
+[0.806s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_description -- -j20 -l20[0m
+[0.807s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_description[0m
+[0.815s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build --no-deps symlink_data[0m
+[1.026s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(my_robot_description)
+[1.026s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/my_robot_description[0m
+[1.030s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description' for CMake module files
+[1.030s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description' for CMake config files
+[1.031s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('my_robot_description', 'cmake_prefix_path')
+[1.031s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.ps1'
+[1.032s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.dsv'
+[1.032s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.sh'
+[1.033s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/bin'
+[1.033s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/lib/pkgconfig/my_robot_description.pc'
+[1.033s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/lib/python3.10/site-packages'
+[1.033s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/bin'
+[1.034s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.ps1'
+[1.035s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.dsv'
+[1.035s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.sh'
+[1.036s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.bash'
+[1.037s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.zsh'
+[1.037s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/colcon-core/packages/my_robot_description)
+[1.038s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(my_robot_description)
+[1.039s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description' for CMake module files
+[1.039s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description' for CMake config files
+[1.040s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('my_robot_description', 'cmake_prefix_path')
+[1.040s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.ps1'
+[1.040s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.dsv'
+[1.041s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.sh'
+[1.041s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/bin'
+[1.041s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/lib/pkgconfig/my_robot_description.pc'
+[1.041s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/lib/python3.10/site-packages'
+[1.042s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_description/bin'
+[1.042s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.ps1'
+[1.042s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.dsv'
+[1.043s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.sh'
+[1.043s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.bash'
+[1.044s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/my_robot_description/package.zsh'
+[1.044s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/my_robot_description/share/colcon-core/packages/my_robot_description)
+[1.044s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/my_robot_bringup' with build type 'ament_cmake'
+[1.045s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ali/Desktop/Ros2_Control/src/my_robot_bringup'
+[1.045s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.045s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.051s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/my_robot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/my_robot_bringup[0m
+[1.067s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_description)
+[1.068s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description' for CMake module files
+[1.069s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_description[0m
+[1.069s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description' for CMake config files
+[1.069s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_description', 'cmake_prefix_path')
+[1.070s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/hook/cmake_prefix_path.ps1'
+[1.070s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/hook/cmake_prefix_path.dsv'
+[1.070s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/hook/cmake_prefix_path.sh'
+[1.070s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/bin'
+[1.070s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/lib/pkgconfig/aero_description.pc'
+[1.071s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/lib/python3.10/site-packages'
+[1.071s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/bin'
+[1.071s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.ps1'
+[1.071s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.dsv'
+[1.071s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.sh'
+[1.072s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.bash'
+[1.072s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.zsh'
+[1.072s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_description/share/colcon-core/packages/aero_description)
+[1.072s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_description)
+[1.072s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description' for CMake module files
+[1.073s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description' for CMake config files
+[1.073s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_description', 'cmake_prefix_path')
+[1.073s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/hook/cmake_prefix_path.ps1'
+[1.073s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/hook/cmake_prefix_path.dsv'
+[1.073s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/hook/cmake_prefix_path.sh'
+[1.074s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/bin'
+[1.074s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/lib/pkgconfig/aero_description.pc'
+[1.074s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/lib/python3.10/site-packages'
+[1.074s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_description/bin'
+[1.074s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.ps1'
+[1.075s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.dsv'
+[1.075s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.sh'
+[1.076s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.bash'
+[1.076s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.zsh'
+[1.076s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_description/share/colcon-core/packages/aero_description)
+[1.076s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/aero_bringup' with build type 'ament_cmake'
+[1.077s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ali/Desktop/Ros2_Control/src/aero_bringup'
+[1.077s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.077s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.079s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/aero_moveit_config' with build type 'ament_cmake'
+[1.079s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ali/Desktop/Ros2_Control/src/aero_moveit_config'
+[1.079s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.079s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.083s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_bringup[0m
+[1.085s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_moveit_config[0m
+[1.219s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_arm_control', 'pythonpath_develop')
+[1.220s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/build/aero_arm_control/share/aero_arm_control/hook/pythonpath_develop.ps1'
+[1.221s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control' returned '0': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build --no-deps symlink_data[0m
+[1.221s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/build/aero_arm_control/share/aero_arm_control/hook/pythonpath_develop.dsv'
+[1.221s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/build/aero_arm_control/share/aero_arm_control/hook/pythonpath_develop.sh'
+[1.222s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control' for CMake module files
+[1.222s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control' for CMake config files
+[1.222s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib'
+[1.222s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/bin'
+[1.223s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/pkgconfig/aero_arm_control.pc'
+[1.223s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages'
+[1.223s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_arm_control', 'pythonpath')
+[1.223s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/pythonpath.ps1'
+[1.223s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/pythonpath.dsv'
+[1.223s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/pythonpath.sh'
+[1.224s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/bin'
+[1.224s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_arm_control)
+[1.224s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.ps1'
+[1.225s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.dsv'
+[1.225s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.sh'
+[1.225s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.bash'
+[1.226s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.zsh'
+[1.226s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/colcon-core/packages/aero_arm_control)
+[1.556s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/my_robot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/my_robot_bringup[0m
+[1.558s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/my_robot_bringup -- -j20 -l20[0m
+[1.564s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_moveit_config[0m
+[1.566s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_moveit_config -- -j20 -l20[0m
+[1.584s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_bringup[0m
+[1.585s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_bringup -- -j20 -l20[0m
+[1.590s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/my_robot_bringup -- -j20 -l20[0m
+[1.591s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/my_robot_bringup[0m
+[1.593s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_moveit_config -- -j20 -l20[0m
+[1.595s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_moveit_config[0m
+[1.615s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_bringup -- -j20 -l20[0m
+[1.617s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/build/aero_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_bringup[0m
+[1.777s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(my_robot_bringup)
+[1.777s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup' for CMake module files
+[1.778s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/my_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/my_robot_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/my_robot_bringup[0m
+[1.779s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup' for CMake config files
+[1.779s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('my_robot_bringup', 'cmake_prefix_path')
+[1.779s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.ps1'
+[1.780s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.dsv'
+[1.780s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.sh'
+[1.781s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/lib'
+[1.781s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/bin'
+[1.781s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[1.782s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/lib/python3.10/site-packages'
+[1.782s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/bin'
+[1.783s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[1.784s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[1.785s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[1.785s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[1.786s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[1.786s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[1.787s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(my_robot_bringup)
+[1.787s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup' for CMake module files
+[1.788s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup' for CMake config files
+[1.788s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('my_robot_bringup', 'cmake_prefix_path')
+[1.789s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.ps1'
+[1.790s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.dsv'
+[1.790s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.sh'
+[1.791s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/lib'
+[1.791s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/bin'
+[1.791s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[1.791s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/lib/python3.10/site-packages'
+[1.791s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/bin'
+[1.791s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[1.792s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[1.792s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[1.793s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[1.793s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[1.793s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[1.829s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_bringup)
+[1.829s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup' for CMake module files
+[1.829s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_bringup[0m
+[1.830s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup' for CMake config files
+[1.830s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_bringup', 'cmake_prefix_path')
+[1.830s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/hook/cmake_prefix_path.ps1'
+[1.831s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/hook/cmake_prefix_path.dsv'
+[1.831s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/hook/cmake_prefix_path.sh'
+[1.832s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/bin'
+[1.832s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/lib/pkgconfig/aero_bringup.pc'
+[1.832s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/lib/python3.10/site-packages'
+[1.832s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/bin'
+[1.833s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.ps1'
+[1.833s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.dsv'
+[1.834s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.sh'
+[1.834s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.bash'
+[1.834s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.zsh'
+[1.834s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/colcon-core/packages/aero_bringup)
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_bringup)
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup' for CMake module files
+[1.835s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup' for CMake config files
+[1.835s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_bringup', 'cmake_prefix_path')
+[1.835s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/hook/cmake_prefix_path.ps1'
+[1.836s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/hook/cmake_prefix_path.dsv'
+[1.836s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/hook/cmake_prefix_path.sh'
+[1.836s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/bin'
+[1.836s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/lib/pkgconfig/aero_bringup.pc'
+[1.837s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/lib/python3.10/site-packages'
+[1.837s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_bringup/bin'
+[1.837s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.ps1'
+[1.837s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.dsv'
+[1.838s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.sh'
+[1.839s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.bash'
+[1.839s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.zsh'
+[1.839s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/colcon-core/packages/aero_bringup)
+[1.868s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_moveit_config)
+[1.869s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config' for CMake module files
+[1.869s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_moveit_config[0m
+[1.869s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config' for CMake config files
+[1.870s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_moveit_config', 'cmake_prefix_path')
+[1.870s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/hook/cmake_prefix_path.ps1'
+[1.870s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/hook/cmake_prefix_path.dsv'
+[1.870s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/hook/cmake_prefix_path.sh'
+[1.871s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/bin'
+[1.871s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/lib/pkgconfig/aero_moveit_config.pc'
+[1.871s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/lib/python3.10/site-packages'
+[1.871s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/bin'
+[1.872s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.ps1'
+[1.872s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.dsv'
+[1.872s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.sh'
+[1.873s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.bash'
+[1.873s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.zsh'
+[1.873s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/colcon-core/packages/aero_moveit_config)
+[1.873s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_moveit_config)
+[1.874s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config' for CMake module files
+[1.874s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config' for CMake config files
+[1.874s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_moveit_config', 'cmake_prefix_path')
+[1.874s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/hook/cmake_prefix_path.ps1'
+[1.875s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/hook/cmake_prefix_path.dsv'
+[1.875s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/hook/cmake_prefix_path.sh'
+[1.875s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/bin'
+[1.875s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/lib/pkgconfig/aero_moveit_config.pc'
+[1.875s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/lib/python3.10/site-packages'
+[1.875s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/bin'
+[1.876s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.ps1'
+[1.876s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.dsv'
+[1.876s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.sh'
+[1.876s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.bash'
+[1.876s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.zsh'
+[1.877s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/colcon-core/packages/aero_moveit_config)
+[1.877s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.877s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.877s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[1.877s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.882s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.882s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.882s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[1.897s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[1.898s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.ps1'
+[1.899s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ali/Desktop/Ros2_Control/install/_local_setup_util_ps1.py'
+[1.900s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.ps1'
+[1.901s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.sh'
+[1.902s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ali/Desktop/Ros2_Control/install/_local_setup_util_sh.py'
+[1.902s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.sh'
+[1.903s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.bash'
+[1.903s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.bash'
+[1.904s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.zsh'
+[1.904s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.zsh'

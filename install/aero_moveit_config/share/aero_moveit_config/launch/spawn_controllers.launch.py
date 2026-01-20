@@ -1,0 +1,1 @@
+/home/ali/Desktop/Ros2_Control/src/aero_moveit_config/launch/spawn_controllers.launch.py

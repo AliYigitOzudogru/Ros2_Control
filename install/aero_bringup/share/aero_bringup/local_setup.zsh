@@ -1,0 +1,1 @@
+/home/ali/Desktop/Ros2_Control/build/aero_bringup/ament_cmake_environment_hooks/local_setup.zsh

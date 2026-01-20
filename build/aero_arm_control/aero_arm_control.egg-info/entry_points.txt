@@ -1,0 +1,3 @@
+[console_scripts]
+arm_teleop = aero_arm_control.arm_teleop:main
+

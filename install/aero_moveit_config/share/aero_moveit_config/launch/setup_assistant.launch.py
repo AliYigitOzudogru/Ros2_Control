@@ -1,0 +1,1 @@
+/home/ali/Desktop/Ros2_Control/src/aero_moveit_config/launch/setup_assistant.launch.py

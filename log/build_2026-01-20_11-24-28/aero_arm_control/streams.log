@@ -1,0 +1,17 @@
+[0.573s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build --no-deps symlink_data
+[0.776s] running develop
+[0.911s] running egg_info
+[0.911s] writing aero_arm_control.egg-info/PKG-INFO
+[0.911s] writing dependency_links to aero_arm_control.egg-info/dependency_links.txt
+[0.911s] writing entry points to aero_arm_control.egg-info/entry_points.txt
+[0.911s] writing requirements to aero_arm_control.egg-info/requires.txt
+[0.911s] writing top-level names to aero_arm_control.egg-info/top_level.txt
+[0.913s] reading manifest file 'aero_arm_control.egg-info/SOURCES.txt'
+[0.913s] writing manifest file 'aero_arm_control.egg-info/SOURCES.txt'
+[0.914s] running build_ext
+[0.914s] Creating /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero-arm-control.egg-link (link to .)
+[0.915s] Installing arm_teleop script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+[0.915s] 
+[0.915s] Installed /home/ali/Desktop/Ros2_Control/build/aero_arm_control
+[0.915s] running symlink_data
+[0.946s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control' returned '0': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build --no-deps symlink_data

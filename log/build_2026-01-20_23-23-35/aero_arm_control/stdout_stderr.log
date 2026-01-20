@@ -1,0 +1,36 @@
+running develop
+Removing /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero-arm-control.egg-link (link to .)
+running egg_info
+writing ../../build/aero_arm_control/aero_arm_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/aero_arm_control/aero_arm_control.egg-info/dependency_links.txt
+writing entry points to ../../build/aero_arm_control/aero_arm_control.egg-info/entry_points.txt
+writing requirements to ../../build/aero_arm_control/aero_arm_control.egg-info/requires.txt
+writing top-level names to ../../build/aero_arm_control/aero_arm_control.egg-info/top_level.txt
+reading manifest file '../../build/aero_arm_control/aero_arm_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/aero_arm_control/aero_arm_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build
+creating /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib
+creating /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+copying aero_arm_control/arm_teleop.py -> /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+copying aero_arm_control/__init__.py -> /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+copying aero_arm_control/ps4_rover_controller.py -> /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+running install
+running install_lib
+creating /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+copying /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control/arm_teleop.py -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+copying /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control/__init__.py -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+copying /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control/ps4_rover_controller.py -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+byte-compiling /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control/arm_teleop.py to arm_teleop.cpython-310.pyc
+byte-compiling /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control/ps4_rover_controller.py to ps4_rover_controller.cpython-310.pyc
+running install_data
+copying resource/aero_arm_control -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control
+running install_egg_info
+Copying ../../build/aero_arm_control/aero_arm_control.egg-info to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing arm_teleop script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+Installing ps4_rover_controller script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+writing list of installed files to '/home/ali/Desktop/Ros2_Control/build/aero_arm_control/install.log'

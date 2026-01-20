@@ -21,13 +21,13 @@
     
 
 
-    <xacro:if value="$(arg use_ignition)">
+    <xacro:if value="${use_ignition}">
         <xacro:include filename="aero.ignition.xacro" />
     </xacro:if>
-    <xacro:if value="$(arg use_webots)">
+    <xacro:if value="${use_webots}">
         <xacro:include filename="aero.webots.xacro" />
     </xacro:if>
-    <xacro:if value="$(arg use_gazebo)">
+    <xacro:if value="${use_gazebo}">
         <xacro:include filename="aero.gazebo.xacro" />
     </xacro:if>
 

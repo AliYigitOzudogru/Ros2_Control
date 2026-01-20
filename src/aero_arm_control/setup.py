@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import setup, find_packages
 
 package_name = 'aero_arm_control'
 
@@ -15,12 +15,14 @@ setup(
     zip_safe=True,
     maintainer='ubuntu',
     maintainer_email='n.cem110@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Aero arm control package',
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'arm_teleop = aero_arm_control.arm_teleop:main'
+            'arm_teleop = aero_arm_control.arm_teleop:main',
+            'ps4_rover_controller = aero_arm_control.ps4_rover_controller:main'
         ],
     },
 )
+

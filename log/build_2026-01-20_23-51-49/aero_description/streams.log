@@ -1,0 +1,64 @@
+[0.011s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_description
+[0.077s] -- The C compiler identification is GNU 11.4.0
+[0.140s] -- The CXX compiler identification is GNU 11.4.0
+[0.150s] -- Detecting C compiler ABI info
+[0.242s] -- Detecting C compiler ABI info - done
+[0.250s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.250s] -- Detecting C compile features
+[0.251s] -- Detecting C compile features - done
+[0.254s] -- Detecting CXX compiler ABI info
+[0.351s] -- Detecting CXX compiler ABI info - done
+[0.359s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.360s] -- Detecting CXX compile features
+[0.360s] -- Detecting CXX compile features - done
+[0.362s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.552s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.623s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.717s] -- Configuring done
+[0.720s] -- Generating done
+[0.722s] -- Build files have been written to: /home/ali/Desktop/Ros2_Control/build/aero_description
+[0.728s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/install/aero_description
+[0.732s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_description -- -j20 -l20
+[0.773s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_description -- -j20 -l20
+[0.783s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_description
+[0.791s] -- Install configuration: ""
+[0.791s] -- Execute custom install script
+[0.792s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/aero.gazebo.xacro
+[0.800s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/aero.ignition.xacro
+[0.810s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/aero.urdf.xacro
+[0.823s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/aero.webots.xacro
+[0.837s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/aero_base.xacro
+[0.848s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/arm/arm.urdf.xacro
+[0.857s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/common_properties.xacro
+[0.868s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//urdf/mobile_base.ros2_control.xacro
+[0.877s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//launch/arm.display.launch.py
+[0.885s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//launch/display.launch.py
+[0.896s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//rviz/urdf_config.rviz
+[0.907s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/LINK1.stl
+[0.920s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/LINK2.stl
+[0.936s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/LINK3.stl
+[0.945s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/LINK4.stl
+[0.954s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/arm_base_link.stl
+[0.964s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/arm_end.stl
+[0.973s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/base_link.STL
+[0.980s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/base_link.stl.new
+[0.989s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/link_lb.STL
+[0.998s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/link_lf.STL
+[1.006s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/link_rb.STL
+[1.015s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description//meshes/link_rf.STL
+[1.032s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/ament_index/resource_index/package_run_dependencies/aero_description
+[1.042s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/ament_index/resource_index/parent_prefix_path/aero_description
+[1.050s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/environment/ament_prefix_path.sh
+[1.059s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/environment/ament_prefix_path.dsv
+[1.067s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/environment/path.sh
+[1.078s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/environment/path.dsv
+[1.085s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/local_setup.bash
+[1.095s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/local_setup.sh
+[1.103s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/local_setup.zsh
+[1.113s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/local_setup.dsv
+[1.129s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.dsv
+[1.141s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/ament_index/resource_index/packages/aero_description
+[1.153s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/cmake/aero_descriptionConfig.cmake
+[1.162s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/cmake/aero_descriptionConfig-version.cmake
+[1.170s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_description/share/aero_description/package.xml
+[1.182s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_description

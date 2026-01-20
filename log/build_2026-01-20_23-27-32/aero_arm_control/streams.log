@@ -1,0 +1,20 @@
+[0.501s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build --no-deps symlink_data --force
+[0.692s] running develop
+[0.821s] running egg_info
+[0.821s] writing aero_arm_control.egg-info/PKG-INFO
+[0.821s] writing dependency_links to aero_arm_control.egg-info/dependency_links.txt
+[0.821s] writing entry points to aero_arm_control.egg-info/entry_points.txt
+[0.821s] writing requirements to aero_arm_control.egg-info/requires.txt
+[0.821s] writing top-level names to aero_arm_control.egg-info/top_level.txt
+[0.822s] reading manifest file 'aero_arm_control.egg-info/SOURCES.txt'
+[0.822s] writing manifest file 'aero_arm_control.egg-info/SOURCES.txt'
+[0.823s] running build_ext
+[0.823s] Creating /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero-arm-control.egg-link (link to .)
+[0.824s] Installing arm_teleop script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+[0.824s] Installing ps4_rover_controller script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+[0.824s] 
+[0.824s] Installed /home/ali/Desktop/Ros2_Control/build/aero_arm_control
+[0.824s] running symlink_data
+[0.824s] symbolically linking /home/ali/Desktop/Ros2_Control/build/aero_arm_control/resource/aero_arm_control -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/ament_index/resource_index/packages
+[0.824s] symbolically linking /home/ali/Desktop/Ros2_Control/build/aero_arm_control/package.xml -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control
+[0.843s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control' returned '0': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build --no-deps symlink_data --force

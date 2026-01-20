@@ -72,13 +72,46 @@ def launch_setup(context):
         arguments=['-d', rviz_config_path]
     )
 
+    # --- JOYSTICK NODE ---
+
+    joy_node = Node(
+        package='joy',
+        executable='joy_node',
+        name='joy_node',
+        parameters=[{
+            'dev': '/dev/input/js0',  # PS4 kolu
+            'deadzone': 0.05,
+            'autorepeat_rate': 20.0,
+        }],
+        output='screen'
+    )
+
+    # --- PS4 CONTROLLER NODE ---
+    ps4_controller_node = Node(
+        package='aero_arm_control',
+        executable='ps4_rover_controller',
+        name='ps4_rover_controller',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration("use_gazebo"),
+            'max_linear_speed': 2.0,
+            'max_angular_speed': 2.0,
+            'deadzone': 0.1,
+            'arm_speed_scale': 1.0,
+        }],
+        output='screen',
+        emulate_tty=True,
+    )
+
+
     to_launch = [
         robot_state_publisher_node,
         controller_manager,
         jsb_spawner,
         ddc_spawner,
         jtc_spawner,
-        rviz2_node
+        # rviz2_node,  # Geçici olarak devre dışı
+        joy_node,
+        ps4_controller_node
     ]
 
     if use_gazebo == "true":

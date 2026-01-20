@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing aero_arm_control.egg-info/PKG-INFO
+writing dependency_links to aero_arm_control.egg-info/dependency_links.txt
+writing entry points to aero_arm_control.egg-info/entry_points.txt
+writing requirements to aero_arm_control.egg-info/requires.txt
+writing top-level names to aero_arm_control.egg-info/top_level.txt
+reading manifest file 'aero_arm_control.egg-info/SOURCES.txt'
+writing manifest file 'aero_arm_control.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero-arm-control.egg-link (link to .)
+Installing arm_teleop script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+Installing ps4_rover_controller script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+
+Installed /home/ali/Desktop/Ros2_Control/build/aero_arm_control
+running symlink_data

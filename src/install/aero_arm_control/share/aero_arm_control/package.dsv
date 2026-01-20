@@ -1,0 +1,3 @@
+source;share/aero_arm_control/hook/pythonpath.ps1
+source;share/aero_arm_control/hook/pythonpath.dsv
+source;share/aero_arm_control/hook/pythonpath.sh

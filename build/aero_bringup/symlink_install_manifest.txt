@@ -1,5 +1,8 @@
 /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/aero.launch.py
+/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/aero_gazebo.launch.py
+/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/aero_ignition.launch.py
 /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/ignition.launch.py
+/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/ps4_control.launch.py
 /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/webots.launch.py
 /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/controllers.yaml
 /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/ekf.yaml

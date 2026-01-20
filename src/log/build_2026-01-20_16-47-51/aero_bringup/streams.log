@@ -1,0 +1,60 @@
+[0.008s] Invoking command in '/home/ali/Desktop/Ros2_Control/src/build/aero_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_bringup -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/src/install/aero_bringup
+[0.068s] -- The C compiler identification is GNU 11.4.0
+[0.118s] -- The CXX compiler identification is GNU 11.4.0
+[0.125s] -- Detecting C compiler ABI info
+[0.193s] -- Detecting C compiler ABI info - done
+[0.200s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.200s] -- Detecting C compile features
+[0.200s] -- Detecting C compile features - done
+[0.203s] -- Detecting CXX compiler ABI info
+[0.284s] -- Detecting CXX compiler ABI info - done
+[0.291s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.291s] -- Detecting CXX compile features
+[0.291s] -- Detecting CXX compile features - done
+[0.293s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.439s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.515s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.581s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.581s] -- Added test 'lint_cmake' to check CMake code style
+[0.582s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.583s] -- Added test 'xmllint' to check XML markup files
+[0.584s] -- Configuring done
+[0.586s] -- Generating done
+[0.587s] -- Build files have been written to: /home/ali/Desktop/Ros2_Control/src/build/aero_bringup
+[0.597s] Invoked command in '/home/ali/Desktop/Ros2_Control/src/build/aero_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake /home/ali/Desktop/Ros2_Control/src/aero_bringup -DCMAKE_INSTALL_PREFIX=/home/ali/Desktop/Ros2_Control/src/install/aero_bringup
+[0.598s] Invoking command in '/home/ali/Desktop/Ros2_Control/src/build/aero_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/src/build/aero_bringup -- -j20 -l20
+[0.651s] Invoked command in '/home/ali/Desktop/Ros2_Control/src/build/aero_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/src/build/aero_bringup -- -j20 -l20
+[0.653s] Invoking command in '/home/ali/Desktop/Ros2_Control/src/build/aero_bringup': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/src/build/aero_bringup
+[0.660s] -- Install configuration: ""
+[0.660s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//launch
+[0.660s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//launch/ps4_control.launch.py
+[0.662s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//launch/aero.launch.py
+[0.662s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//launch/webots.launch.py
+[0.662s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//launch/ignition.launch.py
+[0.664s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//config
+[0.664s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//config/ignition_bridge.yaml
+[0.664s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//config/navigation.yaml
+[0.667s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//config/ekf.yaml
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//config/controllers.yaml
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//config/slam.yaml
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//worlds
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//worlds/test.sdf
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//worlds/my_world.wbt
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//aero_bringup
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup//aero_bringup/twist_stamper.py
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/ament_index/resource_index/package_run_dependencies/aero_bringup
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/ament_index/resource_index/parent_prefix_path/aero_bringup
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/environment/ament_prefix_path.sh
+[0.668s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/environment/ament_prefix_path.dsv
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/environment/path.sh
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/environment/path.dsv
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/local_setup.bash
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/local_setup.sh
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/local_setup.zsh
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/local_setup.dsv
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/package.dsv
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/ament_index/resource_index/packages/aero_bringup
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/cmake/aero_bringupConfig.cmake
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/cmake/aero_bringupConfig-version.cmake
+[0.669s] -- Installing: /home/ali/Desktop/Ros2_Control/src/install/aero_bringup/share/aero_bringup/package.xml
+[0.688s] Invoked command in '/home/ali/Desktop/Ros2_Control/src/build/aero_bringup' returned '0': AMENT_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/src/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_description:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/src/build/aero_bringup

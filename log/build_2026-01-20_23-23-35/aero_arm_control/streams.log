@@ -1,0 +1,40 @@
+[0.438s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build
+[0.605s] running develop
+[0.718s] Removing /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero-arm-control.egg-link (link to .)
+[0.735s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_arm_control' returned '0': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build
+[0.736s] Invoking command in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aero_arm_control build --build-base /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build install --record /home/ali/Desktop/Ros2_Control/build/aero_arm_control/install.log --single-version-externally-managed install_data --force
+[0.884s] running egg_info
+[0.885s] writing ../../build/aero_arm_control/aero_arm_control.egg-info/PKG-INFO
+[0.885s] writing dependency_links to ../../build/aero_arm_control/aero_arm_control.egg-info/dependency_links.txt
+[0.885s] writing entry points to ../../build/aero_arm_control/aero_arm_control.egg-info/entry_points.txt
+[0.885s] writing requirements to ../../build/aero_arm_control/aero_arm_control.egg-info/requires.txt
+[0.885s] writing top-level names to ../../build/aero_arm_control/aero_arm_control.egg-info/top_level.txt
+[0.886s] reading manifest file '../../build/aero_arm_control/aero_arm_control.egg-info/SOURCES.txt'
+[0.886s] writing manifest file '../../build/aero_arm_control/aero_arm_control.egg-info/SOURCES.txt'
+[0.886s] running build
+[0.886s] running build_py
+[0.886s] creating /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build
+[0.886s] creating /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib
+[0.887s] creating /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+[0.887s] copying aero_arm_control/arm_teleop.py -> /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+[0.887s] copying aero_arm_control/__init__.py -> /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+[0.887s] copying aero_arm_control/ps4_rover_controller.py -> /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control
+[0.887s] running install
+[0.887s] running install_lib
+[0.887s] creating /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+[0.887s] copying /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control/arm_teleop.py -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+[0.887s] copying /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control/__init__.py -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+[0.887s] copying /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build/lib/aero_arm_control/ps4_rover_controller.py -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control
+[0.887s] byte-compiling /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control/arm_teleop.py to arm_teleop.cpython-310.pyc
+[0.888s] byte-compiling /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control/__init__.py to __init__.cpython-310.pyc
+[0.888s] byte-compiling /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control/ps4_rover_controller.py to ps4_rover_controller.cpython-310.pyc
+[0.889s] running install_data
+[0.889s] copying resource/aero_arm_control -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/ament_index/resource_index/packages
+[0.889s] copying package.xml -> /home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control
+[0.889s] running install_egg_info
+[0.890s] Copying ../../build/aero_arm_control/aero_arm_control.egg-info to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages/aero_arm_control-0.0.0-py3.10.egg-info
+[0.890s] running install_scripts
+[0.901s] Installing arm_teleop script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+[0.902s] Installing ps4_rover_controller script to /home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/aero_arm_control
+[0.902s] writing list of installed files to '/home/ali/Desktop/Ros2_Control/build/aero_arm_control/install.log'
+[0.916s] Invoked command in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control' returned '0': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aero_arm_control build --build-base /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build install --record /home/ali/Desktop/Ros2_Control/build/aero_arm_control/install.log --single-version-externally-managed install_data --force

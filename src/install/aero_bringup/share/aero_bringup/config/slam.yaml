@@ -1,0 +1,66 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: true # ?
+
+    # Core frames and topics
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_footprint
+    scan_topic: /scan
+    
+    # Operational mode: Online asynchronous mapping
+    mode: mapping
+    async_mode: true
+    
+    # Map resolution and dimensions
+    resolution: 0.10
+    max_laser_range: 10.0
+    minimum_time_interval: 0.5
+    transform_publish_period: 0.02  # 50Hz
+    
+    # Optimization parameters
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_dogleg_type: TRADITIONAL_DOGLEG
+    # max_iterations: 30
+    use_compressed_stream: false
+    
+    # Loop closure parameters
+    # loop_closure_minimum_match_score: 0.35
+    # loop_closure_search_distance: 10.0
+    # loop_closure_min_chain_size: 3
+    # loop_closure_max_attempts: 10
+    
+    # # Observation and motion models
+    # observation_buffer_size: 200
+    # observation_buffer_max_scan_count: 1000
+    minimum_travel_distance: 0.2
+    minimum_travel_heading: 0.2
+    
+    # Covariance parameters
+    # covariance_scale: 1.0
+    tf_buffer_duration: 30.0
+    
+    # Initial pose (optional, can be set via service call)
+    # initial_pose:
+    #   x: 0.0
+    #   y: 0.0
+    #   z: 0.0
+    #   yaw: 0.0
+    #   covariance: [0.25, 0.0, 0.0, 0.0, 0.0, 0.0,
+    #                0.0, 0.25, 0.0, 0.0, 0.0, 0.0,
+    #                0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    #                0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    #                0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    #                0.0, 0.0, 0.0, 0.0, 0.0, 0.06853891945200942]
+
+    # Plugin parameters
+    use_scan_matching: true
+    use_scan_barycenter: false
+    do_loop_closing: true
+    debug_mode: false
+    
+    # Ignore certain laser readings (e.g., for short returns)
+    # ignore_obstacles_max_range: 0.2

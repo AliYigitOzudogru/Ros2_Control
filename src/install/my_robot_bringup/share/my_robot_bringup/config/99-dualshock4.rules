@@ -1,0 +1,4 @@
+SUBSYSTEM=="input", ATTRS{name}=="Wireless Controller", MODE="0666", ENV{ID_INPUT_JOYSTICK}="1"
+
+# If your controller shows differently in `udevadm info --attribute-walk`,
+# replace ATTRS{name} with the exact device name shown there.

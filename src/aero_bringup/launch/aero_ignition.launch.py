@@ -29,14 +29,19 @@ def generate_launch_description():
         value=os.path.join(pkg_share, 'meshes') + ':' + str(pkg_share)
     )
     
-    # Plugin path for Gazebo Sim / Ignition
+    # Plugin path for Gazebo Sim / Ignition - ONLY gz_ros2_control, not gazebo_ros2_control
     gz_plugin_path = SetEnvironmentVariable(
         name='IGN_GAZEBO_SYSTEM_PLUGIN_PATH',
-        value='/opt/ros/humble/lib'
+        value='/opt/ros/humble/lib:' + os.environ.get('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', '')
     )
     gz_sim_plugin_path = SetEnvironmentVariable(
         name='GZ_SIM_SYSTEM_PLUGIN_PATH',
-        value='/opt/ros/humble/lib'
+        value='/opt/ros/humble/lib:' + os.environ.get('GZ_SIM_SYSTEM_PLUGIN_PATH', '')
+    )
+    # LD_LIBRARY_PATH for plugin dependencies
+    ld_library_path = SetEnvironmentVariable(
+        name='LD_LIBRARY_PATH',
+        value='/opt/ros/humble/lib:' + os.environ.get('LD_LIBRARY_PATH', '')
     )
 
     # URDF with Ignition enabled
@@ -116,8 +121,8 @@ def generate_launch_description():
         name='ps4_rover_controller',
         parameters=[{
             'use_sim_time': True,
-            'max_linear_speed': 2.0,
-            'max_angular_speed': 2.0,
+            'max_linear_speed': 50.0,  # AŞIRI YÜKSEK - test için
+            'max_angular_speed': 10.0,  # AŞIRI YÜKSEK - test için
             'deadzone': 0.1,
             'arm_speed_scale': 1.0,
         }],
@@ -137,8 +142,11 @@ def generate_launch_description():
     diff_drive_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["diff_drive_controller", "--controller-manager", "/controller_manager"],
+        arguments=["diff_drive_controller", "-c", "/controller_manager", "-p", controller_config],
         parameters=[{'use_sim_time': True}],
+        remappings=[
+            ('/diff_drive_controller/cmd_vel_unstamped', '/cmd_vel'),
+        ],
         output='screen'
     )
 
@@ -154,6 +162,7 @@ def generate_launch_description():
         gz_resource_path,
         gz_plugin_path,
         gz_sim_plugin_path,
+        ld_library_path,
         robot_state_publisher,
         ignition_gazebo,
         delayed_bridge,

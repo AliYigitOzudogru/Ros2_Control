@@ -1,1 +1,0 @@
-/home/ali/Desktop/Ros2_Control/src/aero_arm_control/setup.py

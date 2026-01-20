@@ -42,8 +42,12 @@
     </gazebo>
 
     <gazebo>
-        <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
             <parameters>/home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/config/controllers.yaml</parameters>
+            <ros>
+                <namespace></namespace>
+                <remapping>/controller_manager/robot_description:=/robot_description</remapping>
+            </ros>
         </plugin>
         <plugin filename="libignition-gazebo-imu-system.so"
                 name="ignition::gazebo::systems::Imu">
@@ -53,6 +57,43 @@
             name="ignition::gazebo::systems::Sensors">
             <render_engine>ogre2</render_engine>
         </plugin>
+    </gazebo>
+
+    <!-- Wheel friction properties for Ignition Gazebo -->
+    <gazebo reference="front_right_wheel_link">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>10000000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.005</minDepth>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+
+    <gazebo reference="front_left_wheel_link">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>10000000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.005</minDepth>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+
+    <gazebo reference="back_right_wheel_link">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>10000000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.005</minDepth>
+        <fdir1>1 0 0</fdir1>
+    </gazebo>
+
+    <gazebo reference="back_left_wheel_link">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <kp>10000000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.005</minDepth>
+        <fdir1>1 0 0</fdir1>
     </gazebo>
 
 </robot>

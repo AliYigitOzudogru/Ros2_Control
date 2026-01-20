@@ -25,8 +25,8 @@ class PS4RoverController(Node):
         super().__init__('ps4_rover_controller')
         
         # Parametreler
-        self.declare_parameter('max_linear_speed', 2.0)
-        self.declare_parameter('max_angular_speed', 2.0)
+        self.declare_parameter('max_linear_speed', 10.0)  # Artırıldı: 2.0 → 10.0
+        self.declare_parameter('max_angular_speed', 3.0)   # Artırıldı: 2.0 → 3.0
         self.declare_parameter('deadzone', 0.1)
         self.declare_parameter('arm_speed_scale', 1.0)
         
@@ -38,7 +38,7 @@ class PS4RoverController(Node):
         # Publishers
         self.cmd_vel_pub = self.create_publisher(
             Twist,
-            '/diff_drive_controller/cmd_vel_unstamped',
+            '/cmd_vel',
             10
         )
         
@@ -76,16 +76,33 @@ class PS4RoverController(Node):
         """PS4 kolu verilerini işle"""
         
         # === ROVER HAREKETİ ===
-        # R2 trigger - Gaz
-        r2_value = msg.axes[4] if len(msg.axes) > 4 else 1.0
-        gas = (1.0 - r2_value) / 2.0
+        # DEBUGGING: Tüm axes değerlerini logla - daha fazla ondalık basamak
+        if len(msg.axes) >= 6:
+            self.get_logger().info(
+                f'JOY axes: [0]={msg.axes[0]:.4f} [1]={msg.axes[1]:.4f} [2]={msg.axes[2]:.4f} [3]={msg.axes[3]:.4f} [4]={msg.axes[4]:.4f} [5]={msg.axes[5]:.4f}',
+                throttle_duration_sec=0.5
+            )
         
-        # L2 trigger - Geri
-        l2_value = msg.axes[5] if len(msg.axes) > 5 else 1.0
-        brake = (1.0 - l2_value) / 2.0
+        # R2 trigger -  axes[4] veya axes[5] kullanılabilir
+        r2_axes4 = msg.axes[4] if len(msg.axes) > 4 else 0.0
+        r2_axes5 = msg.axes[5] if len(msg.axes) > 5 else 1.0
+        
+        # axes[4]: Genelde -1→1 veya 0→1 aralığında
+        # axes[5]: Genelde 1→-1 aralığında (L2 için)
+        
+        # R2 için axes[4] kullan, negatif değerleri pozitife çevir
+        if r2_axes4 < 0:
+            gas = abs(r2_axes4)  # -1.0 basılı → 1.0
+        else:
+            gas = r2_axes4        # 0.0 basılmamış, 1.0 basılı
+        
+        # Karesel scaling - küçük değerleri güçlendirir
+        # 0.05 → 0.0025 değil, 0.224 olur (√0.05 ≈ 0.224)
+        # Veya gas^0.5 kullan: daha yumuşak hızlanma
+        gas = pow(gas, 0.7)  # 0.7 power: 0.05 → 0.13, 0.1 → 0.2, 1.0 → 1.0
         
         # Net lineer hız
-        linear_x = (gas - brake) * self.max_linear
+        linear_x = gas * self.max_linear
         
         # Sol analog X - Direksiyon
         steering = msg.axes[0] if len(msg.axes) > 0 else 0.0
@@ -130,12 +147,11 @@ class PS4RoverController(Node):
         arm_cmd.data = self.arm_positions
         self.arm_pub.publish(arm_cmd)
         
-        # Debug
-        if abs(linear_x) > 0.01 or abs(angular_z) > 0.01:
-            self.get_logger().info(
-                f'Rover - Linear: {linear_x:.2f}, Angular: {angular_z:.2f}',
-                throttle_duration_sec=1.0
-            )
+        # Debug - her zaman göster
+        self.get_logger().info(
+            f'R2={r2_axes4:.4f} → gas={gas:.4f} → Linear={linear_x:.4f}, Angular={angular_z:.4f}',
+            throttle_duration_sec=0.5
+        )
 
 
 def main(args=None):

@@ -93,8 +93,8 @@ def launch_setup(context):
         name='ps4_rover_controller',
         parameters=[{
             'use_sim_time': LaunchConfiguration("use_gazebo"),
-            'max_linear_speed': 2.0,
-            'max_angular_speed': 2.0,
+            'max_linear_speed': 50.0,  # AŞIRI YÜKSEK - test için
+            'max_angular_speed': 10.0,  # AŞIRI YÜKSEK - test için
             'deadzone': 0.1,
             'arm_speed_scale': 1.0,
         }],

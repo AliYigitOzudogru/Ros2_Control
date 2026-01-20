@@ -1,0 +1,41 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ali/Desktop/Ros2_Control/build/aero_bringup
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/aero.launch.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/aero_gazebo.launch.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/aero_ignition.launch.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/ignition.launch.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/ps4_control.launch.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//launch/webots.launch.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/controllers.yaml
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/ekf.yaml
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/ignition_bridge.yaml
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/navigation.yaml
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//config/slam.yaml
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//worlds/my_world.wbt
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//worlds/test.sdf
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup//aero_bringup/twist_stamper.py
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/ament_index/resource_index/package_run_dependencies/aero_bringup
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/ament_index/resource_index/parent_prefix_path/aero_bringup
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/environment/path.sh
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/environment/path.dsv
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/local_setup.bash
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/local_setup.sh
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/local_setup.zsh
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/local_setup.dsv
+-- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.dsv
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/ament_index/resource_index/packages/aero_bringup
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/cmake/aero_bringupConfig.cmake
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/cmake/aero_bringupConfig-version.cmake
+-- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_bringup/share/aero_bringup/package.xml

@@ -59,11 +59,6 @@ joint_state_broadcaster:
       - base_back_left_wheel_joint
       - base_back_right_wheel_joint
       - base_front_right_wheel_joint
-      
-      - arm_joint0
-      - arm_joint1
-      - arm_joint2
-      - arm_joint3
 
 diff_drive_controller:
   ros__parameters:
@@ -73,8 +68,8 @@ diff_drive_controller:
     left_wheel_names: ["base_front_left_wheel_joint", "base_back_left_wheel_joint"]
     right_wheel_names: ["base_front_right_wheel_joint", "base_back_right_wheel_joint"]
 
-    wheel_separation: 0.8    # TODO: change
-    wheel_radius: 0.2        # TODO: change
+    wheel_separation: 1.1    # base_width (1.0) + wheel_length (0.1)
+    wheel_radius: 0.2
 
     odom_frame_id: odom
     base_frame_id: base_footprint

@@ -1,0 +1,191 @@
+[0.126s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'aero_arm_control'][0m
+[0.126s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['aero_arm_control'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7246a7f330d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7246a7f32a40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7246a7f32a40>>, mixin_verb=('build',))[0m
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.313s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/ali/Desktop/Ros2_Control'
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.313s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.323s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.324s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'ignore'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'ignore_ament_install'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['colcon_pkg']
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'colcon_pkg'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['colcon_meta']
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'colcon_meta'
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extensions ['ros']
+[0.325s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_arm_control) by extension 'ros'
+[0.327s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_arm_control' with type 'ros.ament_python' and name 'aero_arm_control'[0m
+[0.327s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'ignore'
+[0.327s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'ignore_ament_install'
+[0.327s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['colcon_pkg']
+[0.327s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'colcon_pkg'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['colcon_meta']
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'colcon_meta'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extensions ['ros']
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_bringup) by extension 'ros'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_bringup' with type 'ros.ament_cmake' and name 'aero_bringup'[0m
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'ignore'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'ignore_ament_install'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['colcon_pkg']
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'colcon_pkg'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['colcon_meta']
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'colcon_meta'
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extensions ['ros']
+[0.328s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_description) by extension 'ros'
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_description' with type 'ros.ament_cmake' and name 'aero_description'[0m
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'ignore'
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'ignore_ament_install'
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['colcon_pkg']
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'colcon_pkg'
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['colcon_meta']
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'colcon_meta'
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extensions ['ros']
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/aero_moveit_config) by extension 'ros'
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/aero_moveit_config' with type 'ros.ament_cmake' and name 'aero_moveit_config'[0m
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/build) by extension 'ignore'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/build) ignored
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/install) by extension 'ignore'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/install) ignored
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/log) by extension 'ignore'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/log) ignored
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'ignore'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'ignore_ament_install'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['colcon_pkg']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'colcon_pkg'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['colcon_meta']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'colcon_meta'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extensions ['ros']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_bringup) by extension 'ros'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/my_robot_bringup' with type 'ros.ament_cmake' and name 'my_robot_bringup'[0m
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'ignore'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'ignore_ament_install'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['colcon_pkg']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'colcon_pkg'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['colcon_meta']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'colcon_meta'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extensions ['ros']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/my_robot_description) by extension 'ros'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/my_robot_description' with type 'ros.ament_cmake' and name 'my_robot_description'[0m
+[0.333s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.333s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.333s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.333s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.333s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.347s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'aero_description' in 'src/aero_description'
+[0.347s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'my_robot_description' in 'src/my_robot_description'
+[0.347s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'aero_bringup' in 'src/aero_bringup'
+[0.347s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'aero_moveit_config' in 'src/aero_moveit_config'
+[0.347s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'my_robot_bringup' in 'src/my_robot_bringup'
+[0.347s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.347s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.349s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 6 installed packages in /home/ali/Desktop/Ros2_Control/install[0m
+[0.350s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 338 installed packages in /opt/ros/humble[0m
+[0.351s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_args' from command line to 'None'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_target' from command line to 'None'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.383s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.384s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'aero_arm_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.384s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'aero_arm_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ali/Desktop/Ros2_Control/build/aero_arm_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ali/Desktop/Ros2_Control/install/aero_arm_control', 'merge_install': False, 'path': '/home/ali/Desktop/Ros2_Control/src/aero_arm_control', 'symlink_install': False, 'test_result_base': None}[0m
+[0.384s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.385s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.385s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control' with build type 'ament_python'
+[0.385s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_arm_control', 'ament_prefix_path')
+[0.388s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.388s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/ament_prefix_path.ps1'
+[0.389s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/ament_prefix_path.dsv'
+[0.389s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/ament_prefix_path.sh'
+[0.390s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.390s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.686s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control'
+[0.687s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.687s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.105s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aero_arm_control build --build-base /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build install --record /home/ali/Desktop/Ros2_Control/build/aero_arm_control/install.log --single-version-externally-managed install_data[0m
+[1.416s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ali/Desktop/Ros2_Control/src/aero_arm_control' returned '0': PYTHONPATH=/home/ali/Desktop/Ros2_Control/build/aero_arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aero_arm_control build --build-base /home/ali/Desktop/Ros2_Control/build/aero_arm_control/build install --record /home/ali/Desktop/Ros2_Control/build/aero_arm_control/install.log --single-version-externally-managed install_data[0m
+[1.419s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control' for CMake module files
+[1.419s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control' for CMake config files
+[1.420s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib'
+[1.420s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/bin'
+[1.420s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/pkgconfig/aero_arm_control.pc'
+[1.421s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/lib/python3.10/site-packages'
+[1.421s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('aero_arm_control', 'pythonpath')
+[1.421s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/pythonpath.ps1'
+[1.421s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/pythonpath.dsv'
+[1.422s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/hook/pythonpath.sh'
+[1.422s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/bin'
+[1.422s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(aero_arm_control)
+[1.423s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.ps1'
+[1.423s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.dsv'
+[1.424s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.sh'
+[1.424s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.bash'
+[1.424s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/aero_arm_control/package.zsh'
+[1.425s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ali/Desktop/Ros2_Control/install/aero_arm_control/share/colcon-core/packages/aero_arm_control)
+[1.425s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.425s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.426s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[1.426s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.433s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.433s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.433s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[1.448s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[1.449s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.ps1'
+[1.449s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ali/Desktop/Ros2_Control/install/_local_setup_util_ps1.py'
+[1.451s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.ps1'
+[1.452s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.sh'
+[1.453s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ali/Desktop/Ros2_Control/install/_local_setup_util_sh.py'
+[1.454s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.sh'
+[1.456s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.bash'
+[1.456s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.bash'
+[1.458s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ali/Desktop/Ros2_Control/install/local_setup.zsh'
+[1.459s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ali/Desktop/Ros2_Control/install/setup.zsh'

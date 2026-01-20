@@ -274,6 +274,7 @@
         <axis xyz="0 1 0" />
     </joint>
 
+    
 
     <!--Ros 2 control part added -->
     <ros2_control name="GazeboSystem" type="system">
@@ -300,8 +301,9 @@
 
     <gazebo>
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-        <parameters>$(find my_bot)/config/my_controllers.yaml</parameters>
-        <parameters>$(find my_bot)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
+        <!-- Use controller configs from my_robot_bringup package -->
+        <parameters>$(find my_robot_bringup)/config/my_robot_controllers.yaml</parameters>
+        <parameters>$(find my_robot_bringup)/config/ignition.yaml</parameters>
     </plugin>
     </gazebo>
 

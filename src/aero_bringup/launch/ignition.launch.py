@@ -44,11 +44,11 @@ def launch_setup(context):
         parameters=[{'robot_description': robot_description, "use_sim_time": True}]
     )
 
-    controller_manager = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[{'robot_description': robot_description}, controller_manager_config_path]
-    )
+    # The `ros2_control_node` is provided by the Gazebo/ros2_control plugin
+    # (gz_ros2_control). Do not launch a second controller_manager here to
+    # avoid duplicate node names and service conflicts; spawners will wait
+    # for the controller_manager service provided by the simulation.
+
 
     jsb_spawner = Node(
         package="controller_manager",
@@ -84,39 +84,52 @@ def launch_setup(context):
 
     # Launches the SLAM node for simultaneous localization and mapping.
     # The `online_async_launch.py` is used for live mapping, not pre-recorded data.
-    slam_toolbox = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            PathJoinSubstitution([
-                os.path.join(get_package_share_path("slam_toolbox"), "launch", "online_async_launch.py")
-            ])
-        ]),
-        launch_arguments={
-            "slam_params_file": slam_config_path,
-            "use_sim_time": "true", # LaunchConfiguration("use_sim_time"),
-        }.items()
-        # condition=IfCondition(LaunchConfiguration("use_slam")),
-    )
+    # Try to include slam_toolbox if it is installed; otherwise skip it.
+    try:
+        slam_toolbox = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                PathJoinSubstitution([
+                    os.path.join(get_package_share_path("slam_toolbox"), "launch", "online_async_launch.py")
+                ])
+            ]),
+            launch_arguments={
+                "slam_params_file": slam_config_path,
+                "use_sim_time": "true",
+            }.items()
+        )
+    except Exception:
+        slam_toolbox = None
 
 
-    ekf_node = Node(
-        package='robot_localization',
-        executable='ekf_node',
-        name='ekf_filter_node',
-        parameters=[os.path.join(bringup_share_folder, 'config', 'ekf.yaml')],
-        # remappings=[('odometry/filtered', '/odom')]  # Remap to publish to /odom
-    )
+    # Include ekf_node only if 'robot_localization' package is available
+    try:
+        # check package availability first
+        from ament_index_python.packages import get_package_share_path as _gpsp
+        _gpsp('robot_localization')
+        ekf_node = Node(
+            package='robot_localization',
+            executable='ekf_node',
+            name='ekf_filter_node',
+            parameters=[os.path.join(bringup_share_folder, 'config', 'ekf.yaml')],
+        )
+    except Exception:
+        ekf_node = None
 
-    nav2_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            PathJoinSubstitution([
-                os.path.join(get_package_share_path("nav2_bringup"), "launch", "navigation_launch.py")
-            ])
-        ]),
-        launch_arguments={
-            "params_file": navigation_config_path,
-            "use_sim_time": "true" # LaunchConfiguration("use_sim_time")
-        }.items()
-    )
+    # Try to include nav2_bringup if installed; otherwise skip navigation
+    try:
+        nav2_launch = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                PathJoinSubstitution([
+                    os.path.join(get_package_share_path("nav2_bringup"), "launch", "navigation_launch.py")
+                ])
+            ]),
+            launch_arguments={
+                "params_file": navigation_config_path,
+                "use_sim_time": "true"
+            }.items()
+        )
+    except Exception:
+        nav2_launch = None
 
     to_launch = [
         IncludeLaunchDescription(
@@ -154,32 +167,49 @@ def launch_setup(context):
         ),
         gz_spawn_entity,
         robot_state_publisher_node,
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=ddc_spawner,
-                on_exit=[ekf_node]
-            )
-        ),
-        RegisterEventHandler(
-           event_handler=OnProcessExit(
-               target_action=ddc_spawner,
-               on_exit=[slam_toolbox]
-           )
-        ),
-        RegisterEventHandler(
-           event_handler=OnProcessExit(
-               target_action=ddc_spawner,
-               on_exit=[nav2_launch]
-           )
-        ),
+        # ekf_node handler will be appended conditionally below if available
+        # slam_toolbox handler will be appended conditionally below if available
+        # nav2 handler will be appended conditionally below if available
         rviz2_node,
         ExecuteProcess(
-            cmd=['python3', '/ros-ws/src/aero_bringup/aero_bringup/twist_stamper.py'],
+            cmd=['python3', os.path.join(bringup_share_folder, 'aero_bringup', 'twist_stamper.py')],
             output='screen',
-            #shell=True
         )
 
     ]
+
+    # If slam_toolbox was found, add its RegisterEventHandler to launch after diff drive spawner
+    if slam_toolbox is not None:
+        to_launch.append(
+            RegisterEventHandler(
+                event_handler=OnProcessExit(
+                    target_action=ddc_spawner,
+                    on_exit=[slam_toolbox]
+                )
+            )
+        )
+
+    # If nav2_launch was found, add its RegisterEventHandler to launch after diff drive spawner
+    if nav2_launch is not None:
+        to_launch.append(
+            RegisterEventHandler(
+                event_handler=OnProcessExit(
+                    target_action=ddc_spawner,
+                    on_exit=[nav2_launch]
+                )
+            )
+        )
+
+    # If ekf_node was created, add its RegisterEventHandler to launch after diff drive spawner
+    if ekf_node is not None:
+        to_launch.append(
+            RegisterEventHandler(
+                event_handler=OnProcessExit(
+                    target_action=ddc_spawner,
+                    on_exit=[ekf_node]
+                )
+            )
+        )
 
     if use_nav2:
         pass

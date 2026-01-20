@@ -18,14 +18,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    teleop_node = Node(
-        package='teleop_twist_joy',
-        executable='teleop_node',
-        name='teleop_twist_joy',
-        parameters=[config],
-        remappings=[('cmd_vel', '/cmd_vel')],
-        output='screen'
-    )
 
     # Custom rover teleop (R2 throttle + left stick steering)
     rover_teleop = Node(
@@ -50,12 +42,13 @@ def generate_launch_description():
         name='ps4_arm_teleop',
         output='screen',
         parameters=[{
-            'axis_base': 2,
-            'axis_shoulder': 3,
-            'joint_names': ['joint1', 'joint2'],
+            # right stick horizontal -> base, right stick vertical -> shoulder
+            'axis_base': 3,
+            'axis_shoulder': 4,
+            'joint_names': ['arm_joint0', 'arm_joint1', 'arm_joint2', 'arm_joint3'],
             'topic': '/arm_controller/joint_trajectory',
             'scale': 0.5
         }]
     )
 
-    return LaunchDescription([joy_node, teleop_node, rover_teleop, arm_teleop])
+    return LaunchDescription([joy_node, rover_teleop, arm_teleop])

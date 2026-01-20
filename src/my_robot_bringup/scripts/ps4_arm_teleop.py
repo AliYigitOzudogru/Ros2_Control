@@ -8,9 +8,11 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 class PS4ArmTeleop(Node):
     def __init__(self):
         super().__init__('ps4_arm_teleop')
-        self.declare_parameter('axis_base', 2)
-        self.declare_parameter('axis_shoulder', 3)
-        self.declare_parameter('joint_names', ['joint1', 'joint2'])
+        # Based on your joystick output: right stick horizontal=3, vertical=4
+        self.declare_parameter('axis_base', 3)
+        self.declare_parameter('axis_shoulder', 4)
+        # Use the same joint names as controller config
+        self.declare_parameter('joint_names', ['arm_joint0', 'arm_joint1', 'arm_joint2', 'arm_joint3'])
         self.declare_parameter('topic', '/arm_controller/joint_trajectory')
         self.declare_parameter('scale', 0.5)
 
@@ -20,7 +22,7 @@ class PS4ArmTeleop(Node):
         self.topic = self.get_parameter('topic').value
         self.scale = self.get_parameter('scale').value
 
-        # internal positions
+        # internal positions (match number of joints)
         self.positions = [0.0 for _ in self.joint_names]
 
         self.pub = self.create_publisher(JointTrajectory, self.topic, 10)
@@ -30,10 +32,11 @@ class PS4ArmTeleop(Node):
         base = msg.axes[self.axis_base] if len(msg.axes) > self.axis_base else 0.0
         sh = msg.axes[self.axis_shoulder] if len(msg.axes) > self.axis_shoulder else 0.0
 
-        # integrate small deltas
+        # integrate small deltas: map base->joint0, shoulder->joint1
         dt = 0.05
-        self.positions[0] += base * self.scale * dt
-        if len(self.positions) > 1:
+        if len(self.positions) >= 1:
+            self.positions[0] += base * self.scale * dt
+        if len(self.positions) >= 2:
             self.positions[1] += sh * self.scale * dt
 
         traj = JointTrajectory()

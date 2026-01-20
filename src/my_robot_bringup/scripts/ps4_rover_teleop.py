@@ -24,6 +24,8 @@ class PS4RoverTeleop(Node):
 
         self.pub = self.create_publisher(Twist, self.topic, 10)
         self.sub = self.create_subscription(Joy, 'joy', self.joy_cb, 10)
+        # remember trigger rest value on first message to determine convention
+        self._trigger_rest = None
 
     def joy_cb(self, msg: Joy):
         twist = Twist()
@@ -31,8 +33,16 @@ class PS4RoverTeleop(Node):
         ta = msg.axes[self.throttle_axis] if len(msg.axes) > self.throttle_axis else 0.0
         sa = msg.axes[self.steer_axis] if len(msg.axes) > self.steer_axis else 0.0
 
-        # PS4 triggers may be -1..1 (rest -1, pressed 1). convert to 0..1
-        throttle = (ta + 1.0) / 2.0
+        # Determine trigger rest convention on first message and use it
+        if self._trigger_rest is None:
+            self._trigger_rest = ta
+
+        # If rest value is positive (driver reports rest ~ +1), map using
+        # (1.0 .. -1.0) -> (0 .. 1). Otherwise use (-1.0 .. 1.0) -> (0 .. 1).
+        if self._trigger_rest > 0.0:
+            throttle = (1.0 - ta) / 2.0
+        else:
+            throttle = (ta + 1.0) / 2.0
         # deadzone
         if abs(sa) < self.deadzone:
             sa = 0.0

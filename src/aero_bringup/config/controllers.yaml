@@ -68,8 +68,8 @@ diff_drive_controller:
     left_wheel_names: ["base_front_left_wheel_joint", "base_back_left_wheel_joint"]
     right_wheel_names: ["base_front_right_wheel_joint", "base_back_right_wheel_joint"]
 
-    wheel_separation: 1.1    # base_width (1.0) + wheel_length (0.1)
-    wheel_radius: 0.2
+    wheel_separation: 0.9    # Y ekseni farkı: 0.45067 - (-0.45193) = 0.9026
+    wheel_radius: 0.326      # Z origin değeri: tekerlek merkezi yerden yüksekliği
 
     odom_frame_id: odom
     base_frame_id: base_footprint
@@ -78,11 +78,20 @@ diff_drive_controller:
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001]
 
     enable_odom_tf: false
+    
     publish_rate: 50.0
-
+    cmd_vel_timeout: 0.5
+    
+    # Hız limitleri - ARTIRILMIŞ! 🚀
     linear.x.has_velocity_limits: true
-    linear.x.max_velocity: 5.0
-    linear.x.min_velocity: -5.0
+    linear.x.max_velocity: 10.0
+    linear.x.min_velocity: -10.0
+    linear.x.has_acceleration_limits: true
+    linear.x.max_acceleration: 5.0
+    
     angular.z.has_velocity_limits: true
-    angular.z.max_velocity: 5.0
-    angular.z.min_velocity: -5.0
+    angular.z.max_velocity: 6.0
+    angular.z.min_velocity: -6.0
+    angular.z.has_acceleration_limits: true
+    angular.z.max_acceleration: 4.0
+

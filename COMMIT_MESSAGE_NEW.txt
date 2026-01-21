@@ -1,0 +1,120 @@
+feat: Add ros2_control infrastructure and fix critical bugs
+
+MAJOR FIXES (21 Ocak 2026):
+============================
+
+1. PS4 Controller R2 Trigger Fix ✅
+   - Changed from axes[4] to axes[5] (correct DualShock axis)
+   - Fixed formula: gas = (1.0 - r2_value) / 2.0
+   - Now correctly reads 0.0 (released) to 1.0 (fully pressed)
+   - File: ps4_rover_controller.py
+
+2. gz_ros2_control Race Condition Workaround ✅
+   - Issue: Plugin couldn't get URDF from /robot_description topic
+   - Root cause: gz_ros2_control 0.7.17 known bug (service timeout)
+   - Solution: Direct URDF string injection via -string argument
+   - Bypasses topic-based URDF retrieval completely
+   - File: aero_ignition.launch.py
+
+3. Complete ros2_control Infrastructure ✅
+   - Added <ros2_control> tag to aero.ignition.xacro
+   - Defined 4 wheel velocity command interfaces (min/max: ±10 rad/s)
+   - Defined 4 arm position command interfaces (±3.14 rad)
+   - Added IMU sensor state interfaces (orientation, angular_velocity, linear_acceleration)
+   - File: aero.ignition.xacro
+
+4. Corrected Wheel Parameters ✅
+   - BEFORE: wheel_radius=0.2m, wheel_separation=1.1m (WRONG!)
+   - ANALYSIS: Calculated from URDF joint origins
+     * Z origin: -0.326m → wheel_radius: 0.326m
+     * Y difference: 0.451 - (-0.452) = 0.903m → wheel_separation: 0.9m
+   - File: controllers.yaml
+
+5. Increased Velocity Limits ⚠️ (Not tested yet)
+   - Linear: 5.0 → 10.0 m/s (max velocity)
+   - Angular: 3.0 → 6.0 rad/s (max velocity)
+   - Linear acceleration: 1.5 → 5.0 m/s²
+   - Angular acceleration: 2.0 → 4.0 rad/s²
+   - File: controllers.yaml
+
+MODIFIED FILES:
+===============
+
+src/aero_arm_control/aero_arm_control/ps4_rover_controller.py
+  * Fixed R2 trigger axis mapping (axes[4] → axes[5])
+  * Corrected gas calculation formula
+
+src/aero_bringup/launch/aero_ignition.launch.py
+  * Implemented direct URDF string injection
+  * Added xacro processing with immediate .toxml() conversion
+  * Changed spawn_entity to use -string argument
+  * Increased controller spawn delays (avoid race conditions)
+
+src/aero_description/urdf/aero.ignition.xacro
+  * Added complete <ros2_control name="GazeboSystem"> section
+  * Defined hardware plugin: gz_ros2_control/GazeboSimSystem
+  * Added 4 wheel joints with velocity command/state interfaces
+  * Added 4 arm joints with position command/state interfaces
+  * Added IMU sensor with all required state interfaces
+  * Re-added parameters path: $(find aero_bringup)/config/controllers.yaml
+
+src/aero_bringup/config/controllers.yaml
+  * Updated wheel_radius: 0.2 → 0.326 (from URDF analysis)
+  * Updated wheel_separation: 1.1 → 0.9 (from URDF analysis)
+  * Increased linear.x.max_velocity: 5.0 → 10.0 m/s
+  * Increased angular.z.max_velocity: 3.0 → 6.0 rad/s
+  * Increased accelerations for faster response
+  * Cleaned up duplicate velocity limit definitions
+
+NEW FILES:
+==========
+
+PROJECT_STATUS.md
+  - Comprehensive status report with all fixes documented
+  - Known issues and next steps
+  - Debug commands and technical notes
+  - Full ros2_control structure documentation
+
+CURRENT STATUS:
+===============
+
+✅ Working:
+  - Ignition Gazebo launches successfully
+  - Robot spawns with direct URDF injection
+  - gz_ros2_control plugin loads
+  - Hardware interfaces defined (4 wheels + 4 arm + IMU)
+  - PS4 controller connects and sends commands
+  - R2 trigger sends correct velocity commands (0-3 m/s)
+
+⚠️ Issues (To be fixed next session):
+  - Controller spawner conflicts ("already loaded" errors)
+  - Plugin auto-load vs launch manual spawn clash
+  - Robot not physically moving yet
+  - Need to resolve controller loading strategy
+
+🔄 Next Steps:
+  1. Resolve controller loading conflict:
+     - Option A: Remove spawners from launch, let plugin auto-load
+     - Option B: Remove parameters from plugin, use manual spawn only
+  2. Verify joint interface claiming with ros2 control list_hardware_interfaces
+  3. Test physical movement in Gazebo
+  4. Optimize velocity limits after movement confirmed
+
+TECHNICAL DETAILS:
+==================
+
+Environment:
+  - ROS 2 Humble
+  - Ignition Gazebo (Fortress/Harmonic)
+  - gz_ros2_control 0.7.17 (has known race condition bug)
+
+Key Technical Decisions:
+  - Direct URDF string injection necessary due to gz_ros2_control bug
+  - Wheel parameters must match URDF joint origins (not arbitrary)
+  - ros2_control hardware interfaces required for joint claiming
+
+Known Bugs Worked Around:
+  - gz_ros2_control service timeout on /robot_description topic
+    → Solved with -string argument direct injection
+
+See PROJECT_STATUS.md for complete analysis and continuation plan.

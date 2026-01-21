@@ -4,7 +4,7 @@ Rover'ı Ignition Gazebo'da PS4 kolu ile sürmek için
 """
 from launch import LaunchDescription
 from launch_ros.actions import Node 
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction, ExecuteProcess, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction, ExecuteProcess, SetEnvironmentVariable, LogInfo
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 from launch_ros.parameter_descriptions import ParameterValue
@@ -56,8 +56,14 @@ def generate_launch_description():
         }
     ).toxml()
     
-    # Now create the parameter value from the processed string
+    # Store the raw XML string for direct injection
+    robot_desc_xml = robot_description_content
+    
+    # Create parameter value for robot_state_publisher
     robot_description = {'robot_description': robot_description_content}
+    
+    # Log successful Xacro processing
+    xacro_log = LogInfo(msg=f"✓ Xacro processed successfully: {len(robot_desc_xml)} characters")
 
     # Robot State Publisher - publishes robot_description to topic as well
     robot_state_publisher = Node(
@@ -80,20 +86,19 @@ def generate_launch_description():
         }
     )
 
-    # Spawn robot - uses robot_description parameter directly
+    # Spawn robot - DIRECT STRING INJECTION to bypass topic-based race condition
     spawn_entity = Node(
         package='ros_gz_sim',
         executable='create',
         arguments=[
             '-name', ROBOT,
-            '-topic', 'robot_description',
+            '-string', robot_desc_xml,  # Direct XML injection - bypasses /robot_description topic
             '-x', '0.0',
             '-y', '0.0',
             '-z', '0.5'
         ],
         parameters=[
             {'use_sim_time': True},
-            robot_description,
         ],
         output='screen'
     )
@@ -128,8 +133,8 @@ def generate_launch_description():
         name='ps4_rover_controller',
         parameters=[{
             'use_sim_time': True,
-            'max_linear_speed': 50.0,  # AŞIRI YÜKSEK - test için
-            'max_angular_speed': 10.0,  # AŞIRI YÜKSEK - test için
+            'max_linear_speed': 3.0,  # Makul hız: 3 m/s = 10.8 km/h
+            'max_angular_speed': 2.0,  # Makul açısal hız
             'deadzone': 0.1,
             'arm_speed_scale': 1.0,
         }],
@@ -140,55 +145,53 @@ def generate_launch_description():
         emulate_tty=True,
     )
 
-    # Controller Spawners - Disabled because Gazebo loads them automatically
-    # joint_state_broadcaster_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-    #     parameters=[{'use_sim_time': True}],
-    #     output='screen'
-    # )
+    # Controller Spawners
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+        parameters=[{'use_sim_time': True}],
+        output='screen'
+    )
 
-    # diff_drive_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["diff_drive_controller", "-c", "/controller_manager", "-p", controller_config],
-    #     parameters=[{'use_sim_time': True}],
-    #     remappings=[
-    #         ('/diff_drive_controller/cmd_vel_unstamped', '/cmd_vel'),
-    #     ],
-    #     output='screen'
-    # )
+    diff_drive_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["diff_drive_controller", "--controller-manager", "/controller_manager"],
+        parameters=[{'use_sim_time': True}],
+        output='screen'
+    )
 
-    # arm_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["arm_controller", "--controller-manager", "/controller_manager"],
-    #     parameters=[{'use_sim_time': True}],
-    #     output='screen'
-    # )
+    arm_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["arm_controller", "--controller-manager", "/controller_manager"],
+        parameters=[{'use_sim_time': True}],
+        output='screen'
+    )
 
-    # Delayed spawners
-    delayed_spawn = TimerAction(period=3.0, actions=[spawn_entity])
+    # Delayed spawners - robot_state_publisher must be ready before spawn
+    delayed_spawn = TimerAction(period=5.0, actions=[spawn_entity])  # Increased delay
     delayed_bridge = TimerAction(period=2.0, actions=[gz_bridge])
-    delayed_joy = TimerAction(period=5.0, actions=[joy_node])
-    delayed_ps4 = TimerAction(period=6.0, actions=[ps4_controller])
-    # delayed_joint_state_spawner = TimerAction(period=8.0, actions=[joint_state_broadcaster_spawner])
-    # delayed_diff_drive_spawner = TimerAction(period=9.0, actions=[diff_drive_controller_spawner])
-    # delayed_arm_controller_spawner = TimerAction(period=10.0, actions=[arm_controller_spawner])
+    delayed_joy = TimerAction(period=8.0, actions=[joy_node])
+    delayed_ps4 = TimerAction(period=9.0, actions=[ps4_controller])
+    delayed_joint_state_spawner = TimerAction(period=12.0, actions=[joint_state_broadcaster_spawner])
+    delayed_diff_drive_spawner = TimerAction(period=13.0, actions=[diff_drive_controller_spawner])
+    delayed_arm_controller_spawner = TimerAction(period=14.0, actions=[arm_controller_spawner])
 
     return LaunchDescription([
         gz_resource_path,
         gz_plugin_path,
         gz_sim_plugin_path,
         ld_library_path,
+        xacro_log,  # Log Xacro processing success
         robot_state_publisher,
         ignition_gazebo,
         delayed_bridge,
         delayed_spawn,
         delayed_joy,
         delayed_ps4,
-        # delayed_joint_state_spawner,
-        # delayed_diff_drive_spawner,
-        # delayed_arm_controller_spawner,
+        delayed_joint_state_spawner,
+        delayed_diff_drive_spawner,
+        delayed_arm_controller_spawner,
     ])

@@ -83,23 +83,19 @@ class PS4RoverController(Node):
                 throttle_duration_sec=0.5
             )
         
-        # R2 trigger -  axes[4] veya axes[5] kullanılabilir
-        r2_axes4 = msg.axes[4] if len(msg.axes) > 4 else 0.0
-        r2_axes5 = msg.axes[5] if len(msg.axes) > 5 else 1.0
+        # R2 trigger - axes[5] kullan (PS4'te: basılmamış=1.0, tam basılı=-1.0)
+        r2_value = msg.axes[5] if len(msg.axes) > 5 else 1.0
         
-        # axes[4]: Genelde -1→1 veya 0→1 aralığında
-        # axes[5]: Genelde 1→-1 aralığında (L2 için)
+        # R2: 1.0 (basılmamış) → -1.0 (tam basılı)
+        # Gas: 0.0 (basılmamış) → 1.0 (tam basılı)
+        gas = (1.0 - r2_value) / 2.0  # 1.0→0.0, -1.0→1.0
         
-        # R2 için axes[4] kullan, negatif değerleri pozitife çevir
-        if r2_axes4 < 0:
-            gas = abs(r2_axes4)  # -1.0 basılı → 1.0
-        else:
-            gas = r2_axes4        # 0.0 basılmamış, 1.0 basılı
+        # Deadzone uygula
+        if gas < 0.05:
+            gas = 0.0
         
-        # Karesel scaling - küçük değerleri güçlendirir
-        # 0.05 → 0.0025 değil, 0.224 olur (√0.05 ≈ 0.224)
-        # Veya gas^0.5 kullan: daha yumuşak hızlanma
-        gas = pow(gas, 0.7)  # 0.7 power: 0.05 → 0.13, 0.1 → 0.2, 1.0 → 1.0
+        # Karesel scaling - daha yumuşak kontrol
+        gas = pow(gas, 0.7)  # 0.7 power: yumuşak hızlanma
         
         # Net lineer hız
         linear_x = gas * self.max_linear
@@ -149,7 +145,7 @@ class PS4RoverController(Node):
         
         # Debug - her zaman göster
         self.get_logger().info(
-            f'R2={r2_axes4:.4f} → gas={gas:.4f} → Linear={linear_x:.4f}, Angular={angular_z:.4f}',
+            f'R2={r2_value:.4f} → gas={gas:.4f} → Linear={linear_x:.4f}, Angular={angular_z:.4f}',
             throttle_duration_sec=0.5
         )
 

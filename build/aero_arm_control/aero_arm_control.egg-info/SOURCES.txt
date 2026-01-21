@@ -11,7 +11,11 @@ setup.py
 aero_arm_control/__init__.py
 aero_arm_control/arm_teleop.py
 aero_arm_control/ps4_rover_controller.py
+aero_arm_control.egg-info/PKG-INFO
+aero_arm_control.egg-info/SOURCES.txt
+aero_arm_control.egg-info/dependency_links.txt
+aero_arm_control.egg-info/entry_points.txt
+aero_arm_control.egg-info/requires.txt
+aero_arm_control.egg-info/top_level.txt
+aero_arm_control.egg-info/zip-safe
 resource/aero_arm_control
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

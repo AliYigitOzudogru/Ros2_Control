@@ -2,9 +2,9 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:if value="${use_ignition}">
-        <ros2_control name="IgnitionSystem" type="system">
+        <ros2_control name="GazeboSystem" type="system">
             <hardware>
-                <plugin>ign_ros2_control/IgnitionSystem</plugin>
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
                 <param name="robot_param">robot_description</param>
                 <param name="robot_param_node">robot_state_publisher</param>
             </hardware>
@@ -37,6 +37,40 @@
                 <command_interface name="velocity">
                     <param name="min">-10</param>
                     <param name="max">10</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <!-- ARM JOINTS -->
+            <joint name="arm_joint0">
+                <command_interface name="position">
+                    <param name="min">-6.28</param>
+                    <param name="max">6.28</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="arm_joint1">
+                <command_interface name="position">
+                    <param name="min">-6.28</param>
+                    <param name="max">6.28</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="arm_joint2">
+                <command_interface name="position">
+                    <param name="min">-6.28</param>
+                    <param name="max">6.28</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="arm_joint3">
+                <command_interface name="position">
+                    <param name="min">-6.28</param>
+                    <param name="max">6.28</param>
                 </command_interface>
                 <state_interface name="position"/>
                 <state_interface name="velocity"/>

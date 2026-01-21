@@ -1,0 +1,40 @@
+[0.016s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config': CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_moveit_config -- -j20 -l20
+[0.067s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --build /home/ali/Desktop/Ros2_Control/build/aero_moveit_config -- -j20 -l20
+[0.070s] Invoking command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config': CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_moveit_config
+[0.087s] -- Install configuration: ""
+[0.087s] -- Execute custom install script
+[0.087s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/ament_index/resource_index/package_run_dependencies/aero_moveit_config
+[0.087s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/ament_index/resource_index/parent_prefix_path/aero_moveit_config
+[0.087s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/environment/ament_prefix_path.sh
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/environment/ament_prefix_path.dsv
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/environment/path.sh
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/environment/path.dsv
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/local_setup.bash
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/local_setup.sh
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/local_setup.zsh
+[0.088s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/local_setup.dsv
+[0.088s] -- Symlinking: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.dsv
+[0.102s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/ament_index/resource_index/packages/aero_moveit_config
+[0.102s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/cmake/aero_moveit_configConfig.cmake
+[0.103s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/cmake/aero_moveit_configConfig-version.cmake
+[0.103s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/package.xml
+[0.103s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/demo.launch.py
+[0.107s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/move_group.launch.py
+[0.108s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/moveit_rviz.launch.py
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/rsp.launch.py
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/setup_assistant.launch.py
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/spawn_controllers.launch.py
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/launch/warehouse_db.launch.py
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/arm_robot.ros2_control.xacro
+[0.109s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/arm_robot.srdf
+[0.110s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/arm_robot.urdf.xacro
+[0.110s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/initial_positions.yaml
+[0.110s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/joint_limits.yaml
+[0.110s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/kinematics.yaml
+[0.111s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/moveit.rviz
+[0.111s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/moveit_controllers.yaml
+[0.111s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/pilz_cartesian_limits.yaml
+[0.111s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/config/ros2_controllers.yaml
+[0.111s] -- Up-to-date symlink: /home/ali/Desktop/Ros2_Control/install/aero_moveit_config/share/aero_moveit_config/.setup_assistant
+[0.125s] Invoked command in '/home/ali/Desktop/Ros2_Control/build/aero_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/ali/Desktop/Ros2_Control/install/aero_description:/home/ali/Desktop/Ros2_Control/install/my_robot_bringup:/home/ali/Desktop/Ros2_Control/install/my_robot_description:/home/ali/Desktop/Ros2_Control/install/aero_moveit_config:/home/ali/Desktop/Ros2_Control/install/aero_bringup:/home/ali/Desktop/Ros2_Control/install/aero_arm_control:/opt/ros/humble /usr/bin/cmake --install /home/ali/Desktop/Ros2_Control/build/aero_moveit_config

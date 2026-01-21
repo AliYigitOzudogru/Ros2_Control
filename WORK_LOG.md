@@ -793,5 +793,243 @@ ros2 launch aero_bringup aero_ignition.launch.py arm_enabled:=false
 
 ---
 
-**Son Güncelleme:** 21 Ocak 2026, 03:30  
-**Sonraki Güncelleme:** 22 Ocak 2026 (yarın)
+## 🔍 Gazebo Ignition Plugin Hataları (21 Ocak 2026, 13:00-14:00)
+
+### Problem: "no ros2_control tag" Hatası
+
+**Hata Mesajı:**
+```
+[ERROR] [gz_ros2_control]: Error parsing URDF in gz_ros2_control plugin, plugin not active : no ros2_control tag
+```
+
+**Root Cause Analysis:**
+1. Gazebo Ignition 6 + ROS 2 Humble kombinasyonunda plugin isimleri değişti
+   - ❌ Eski: `ign_ros2_control/IgnitionSystem`
+   - ✅ Yeni: `gz_ros2_control/GazeboSimSystem`
+
+2. URDF'de ros2_control tag'i var ama plugin okumuyor
+   - Spawn işlemi başarılı: "OK creation of entity"
+   - Ama plugin URDF'yi bulamıyor
+   - Topic vs Parameter karışıklığı
+
+### Denenen Çözümler:
+
+#### 1. Plugin İsimlerini Düzeltme (13:05)
+**Değiştirilen Dosyalar:**
+- `src/aero_description/urdf/mobile_base.ros2_control.xacro`
+- `src/aero_description/urdf/aero.ignition.xacro`
+
+**Değişiklikler:**
+```xml
+<!-- ÖNCE -->
+<plugin>ign_ros2_control/IgnitionSystem</plugin>
+<plugin name="ign_ros2_control::IgnitionROS2ControlPlugin">
+
+<!-- SONRA -->
+<plugin>gz_ros2_control/GazeboSimSystem</plugin>
+<plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+```
+
+**Sonuç:** ✅ Plugin yüklendi AMA hata devam etti
+
+#### 2. robot_param ve robot_param_node Ekleme (13:15)
+**Sorun:** Plugin robot_description parametresini bulamıyor
+
+**Eklenen Parametreler:**
+```xml
+<hardware>
+    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    <param name="robot_param">robot_description</param>
+    <param name="robot_param_node">robot_state_publisher</param>
+</hardware>
+```
+
+**Gazebo plugin tarafına da:**
+```xml
+<plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    <parameters>controllers.yaml</parameters>
+    <robot_param>robot_description</robot_param>
+    <robot_param_node>robot_state_publisher</robot_param_node>
+</plugin>
+```
+
+**Sonuç:** ❌ Hata devam etti - "no ros2_control tag"
+
+#### 3. Spawn İşlemini Düzeltme (13:30)
+**Sorun:** spawn_entity `-topic robot_description` kullanıyor ama robot_state_publisher bu topic'i publish etmiyor
+
+**İlk Deneme - Topic Değiştirme:**
+```python
+# ÖNCE
+arguments=['-topic', 'robot_description']
+
+# SONRA
+arguments=['-topic', '/robot_description']  # Slash eklendi
+```
+**Sonuç:** ❌ Fark etmedi
+
+**İkinci Deneme - Parameter Ekleme (13:40):**
+```python
+spawn_entity = Node(
+    package='ros_gz_sim',
+    executable='create',
+    arguments=[
+        '-name', ROBOT,
+        '-topic', 'robot_description',
+        '-x', '0.0', '-y', '0.0', '-z', '0.5'
+    ],
+    parameters=[
+        {'use_sim_time': True},
+        {'robot_description': robot_description},  # ← EKLENDI
+    ],
+    output='screen'
+)
+```
+
+**Sonuç:** ❓ Henüz test edilmedi (terminal meşgul)
+
+#### 4. robot_state_publisher Publish Frequency (13:35)
+```python
+robot_state_publisher = Node(
+    package="robot_state_publisher",
+    executable="robot_state_publisher",
+    parameters=[{
+        'robot_description': robot_description,
+        'use_sim_time': True,
+        'publish_frequency': 30.0,  # ← EKLENDI
+    }],
+)
+```
+
+**Sonuç:** ❌ Etkisi olmadı
+
+### Teknik Detaylar:
+
+**Log Analizi:**
+```
+[ign-2] [INFO] GazeboSimROS2ControlPlugin: robot_param_node is robot_state_publisher
+[ign-2] [INFO] GazeboSimROS2ControlPlugin: robot_param_node is robot_description  ← YANLIŞ!
+[ign-2] [INFO] gz_ros2_control: connected to service!! robot_state_publisher asking for robot_description
+[ign-2] [INFO] gz_ros2_control: Received URDF from param server
+[ign-2] [ERROR] gz_ros2_control: Error parsing URDF in gz_ros2_control plugin, plugin not active : no ros2_control tag
+```
+
+**Çelişki:** 
+- Log diyor ki: "Received URDF from param server" ✅
+- Ama hemen ardından: "no ros2_control tag" ❌
+
+**URDF Doğrulama:**
+```bash
+xacro src/aero_description/urdf/aero.urdf.xacro use_ignition:=true | grep -A 5 "ros2_control"
+```
+**Sonuç:** ✅ ros2_control tag'i URDF'de VAR!
+
+```xml
+<ros2_control name="GazeboSystem" type="system">
+  <hardware>
+    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    <param name="robot_param">robot_description</param>
+    <param name="robot_param_node">robot_state_publisher</param>
+  </hardware>
+  <joint name="base_front_right_wheel_joint">
+    <command_interface name="velocity"/>
+```
+
+### Teoriler:
+
+1. **Timing Issue:** 
+   - Spawn işlemi robot_description topic'inden okuyor
+   - Plugin başlamadan önce spawn tamamlanıyor
+   - Plugin farklı bir URDF alıyor (boş veya eksik)
+
+2. **Parameter vs Topic Karışıklığı:**
+   - robot_state_publisher: PARAMETER olarak tutuyor
+   - ros_gz_sim create: TOPIC'ten bekliyor
+   - gz_ros2_control plugin: SERVICE'ten alıyor
+   - Üçü aynı URDF'yi görmüyor olabilir
+
+3. **XML Parsing Hatası:**
+   - URDF alınıyor ama parse edilemiyor
+   - Namespace veya encoding problemi
+   - xacro expansion sonrası bozulma
+
+### Sonraki Adımlar (Yapılacaklar):
+
+1. ✅ spawn_entity'ye robot_description parametresi ekle (YAPILDI)
+2. ⏳ Test et ve sonuçları gözle
+3. 🔍 Eğer çözülmezse: URDF'yi doğrudan file'dan oku
+4. 🔍 Alternatif: `-string` argümanı ile direkt URDF string geç
+5. 🔍 Son çare: Gazebo plugin'i debug mode'da çalıştır
+
+### Zaman Çizelgesi:
+- **13:00:** Problem tespit edildi
+- **13:05:** Plugin isimleri düzeltildi
+- **13:15:** robot_param eklendi
+- **13:30:** Spawn işlemi modifiye edildi
+- **13:40:** Parameter-based spawn denendi
+- **13:45:** Log'da çelişki tespit edildi
+- **13:50:** URDF manuel olarak doğrulandı
+- **13:55:** Son değişiklikler build edildi
+- **14:00:** Test için terminal bekleniyor
+
+**Durum:** ✅ **ÇÖZÜLDÜ!**
+
+### ✅ Çözüm (14:05)
+
+**Sorun:** spawn_entity node'u `-topic robot_description` kullanıyordu ama robot_state_publisher bu topic'i publish etmiyordu. Plugin URDF'yi alamıyordu.
+
+**Final Çözüm:**
+```python
+spawn_entity = Node(
+    package='ros_gz_sim',
+    executable='create',
+    arguments=[
+        '-name', ROBOT,
+        '-topic', 'robot_description',  # Topic'ten okur
+        '-x', '0.0', '-y', '0.0', '-z', '0.5'
+    ],
+    parameters=[
+        {'use_sim_time': True},
+        {'robot_description': robot_description},  # ← ÇÖZÜM: Parametreyi de ekle
+    ],
+    output='screen'
+)
+```
+
+**Sonuç:** ✅ BAŞARILI!
+```
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: base_front_right_wheel_joint
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: base_front_left_wheel_joint
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: base_back_right_wheel_joint
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: base_back_left_wheel_joint
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: arm_joint0
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: arm_joint1
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: arm_joint2
+[ign-2] [INFO] [gz_ros2_control]: Loading joint: arm_joint3
+[ign-2] [INFO] [resource_manager]: Initialize hardware 'GazeboSystem'
+[ign-2] [INFO] [resource_manager]: Successful initialization of hardware 'GazeboSystem'
+[ign-2] [INFO] [gz_ros2_control]: System Successfully configured!
+[ign-2] [INFO] [gz_ros2_control]: Loading controller_manager
+```
+
+**"no ros2_control tag" hatası tamamen gitti!** 🎉
+
+### Neden Çalıştı?
+
+1. **spawn_entity** hem `-topic` argümanından hem de `robot_description` parametresinden okuyabilir
+2. Parametreyi ekleyerek node içinde URDF'yi sakladık
+3. ros_gz_sim bu parametreyi Gazebo'ya doğru şekilde geçti
+4. gz_ros2_control plugin URDF'yi başarıyla parse etti
+5. Tüm joint'ler ve controller'lar başarıyla yüklendi
+
+### Sonraki Adım:
+
+✅ Controller'ların çalışıp çalışmadığını test et
+✅ R2 trigger ile rover'ın hareket edip etmediğini kontrol et
+✅ Eğer hareket ediyorsa: **PROBLEM TAMAMEN ÇÖZÜLDÜ!**
+
+---
+
+**Son Güncelleme:** 21 Ocak 2026, 14:05  
+**Durum:** ✅ gz_ros2_control plugin başarıyla yüklendi
+**Sonraki Test:** Rover hareket testi
